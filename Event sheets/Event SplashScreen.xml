@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event SplashScreen</name>
+    <events>
+        <event-block sid="559988966855604">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="336111802989500" type="BGSplashScreen" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="915245456578919" type="System">
+                    <param id="0" name="Layout">Login</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

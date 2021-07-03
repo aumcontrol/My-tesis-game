@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Main_Game3</name>
+    <events>
+        <include>Event Sound</include>
+        <variable constant="0" name="EndTime" sid="302128241158026" static="0" type="number">0</variable>
+        <variable constant="0" name="StartTime" sid="467229967851225" static="0" type="number">0</variable>
+        <variable constant="0" name="FRAMES" sid="989391399476283" static="0" type="number">5</variable>
+        <variable constant="0" name="CellY" sid="555243546613020" static="0" type="number">0</variable>
+        <variable constant="0" name="CellX" sid="236046742662486" static="0" type="number">0</variable>
+        <variable constant="0" name="Score_Game3" sid="110946744482911" static="0" type="number">0</variable>
+        <variable constant="0" name="LINE" sid="309653444466531" static="0" type="number">0</variable>
+        <variable constant="0" name="Type" sid="183975991641380" static="0" type="number">0</variable>
+        <variable constant="0" name="Loop" sid="286552004846731" static="0" type="number">0</variable>
+        <event-group description="" sid="267164576358956" title="DESTROY_LOGIC_GAME3">
+            <sub-events>
+                <comment>At the beginning of the game delete the line and assign different pictures give their type</comment>
+                <event-block sid="174243688258020">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="877538324173366" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="861614363033732" type="Line" />
+                        <action id="0" name="Call function" sid="493990812478114" type="Function">
+                            <param id="0" name="Name">&quot;musicgame3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="621945025800392" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="292502858935259" type="System">
+                            <param id="0" name="Variable">SecondLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="949074075037993" type="System">
+                            <param id="0" name="Variable">MinuteLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="780089918066877" type="System">
+                            <param id="0" name="Variable">MinuteRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="227700922077913" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="676919419689421" type="System">
+                            <param id="0" name="Variable">StartTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="i" sid="312473466215822" static="0" type="number">0</variable>
+                        <variable constant="0" name="StartY" sid="169062996155437" static="0" type="number">0</variable>
+                        <variable constant="0" name="StartX" sid="990940427773694" static="0" type="number">330</variable>
+                        <event-block sid="904113128864644">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="400900848564411" type="System">
+                                    <param id="0" name="Object">Elements</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="943317928161937" type="Elements">
+                                    <param id="0" name="Frame number">floor(random(5))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="872793130501551" type="Elements">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">Elements.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Create START ELEMENTS สร้างจำนวน</comment>
+                        <event-block sid="473433540500150">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="836422075820726" type="System">
+                                    <param id="0" name="Count">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="537994993489940" type="System">
+                                    <param id="0" name="Object to create">Elements</param>
+                                    <param id="1" name="Layer">&quot;Elements&quot;</param>
+                                    <param id="2" name="X">StartX</param>
+                                    <param id="3" name="Y">StartY</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="302949784599089" type="Elements">
+                                    <param id="0" name="Frame number">floor(random(FRAMES))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="764846965080270" type="Elements">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">Elements.AnimationFrame + 1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="589330371226326" type="System">
+                                    <param id="0" name="Variable">StartX</param>
+                                    <param id="1" name="Value">StartX + 180</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="673499418978591" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="675270772597048">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="202215776346304" type="System">
+                                            <param id="0" name="Variable">i</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="653358078321070" type="System">
+                                            <param id="0" name="Variable">StartY</param>
+                                            <param id="1" name="Value">StartY + 170</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="286458321512790" type="System">
+                                            <param id="0" name="Variable">StartX</param>
+                                            <param id="1" name="Value">330</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="101643320809582" type="System">
+                                            <param id="0" name="Variable">i</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>1.</comment>
+                <comment>If this is the first touch, then memorize the position and type of item</comment>
+                <comment>Create an active line, which will look for other elements. When will then stick to them</comment>
+                <event-block sid="597128868138530">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="415090054388736" type="Touch">
+                            <param id="0" name="Object">Elements</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="109281365104986" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="137309545877452" type="Function">
+                            <param id="0" name="Name">&quot;take&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="234416358145882" type="System">
+                            <param id="0" name="Variable">Type</param>
+                            <param id="1" name="Value">Elements.Type</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="569540820811447" type="System">
+                            <param id="0" name="Object to create">Line</param>
+                            <param id="1" name="Layer">&quot;Line&quot;</param>
+                            <param id="2" name="X">Elements.X</param>
+                            <param id="3" name="Y">Elements.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="953045142500830" type="Line">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="336810815594469" type="System">
+                            <param id="0" name="Variable">CellX</param>
+                            <param id="1" name="Value">Elements.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="812695482099660" type="System">
+                            <param id="0" name="Variable">CellY</param>
+                            <param id="1" name="Value">Elements.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="246442709498869" type="System">
+                            <param id="0" name="Variable">LINE</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="565166124072093" type="Elements">
+                            <param id="0" name="Instance variable">Touch</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="802552660303630" type="System">
+                            <param id="0" name="Variable">Loop</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="301806711448537" type="Elements">
+                            <param id="0" name="Frame number">Elements.AnimationFrame + FRAMES</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411365491606308">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="121218021212006" type="Line">
+                            <param id="0" name="Object">WallTest</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="990355599267959" type="Line" />
+                        <action id="-10" name="Set value" sid="718069674654784" type="Line">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="776380304594302" type="System">
+                            <param id="0" name="Variable">LINE</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="177468680172389" type="Elements">
+                            <param id="0" name="Instance variable">Touch</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="143072674325154" type="Function">
+                            <param id="0" name="Name">&quot;take2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="844516094802183" type="System">
+                            <param id="0" name="Variable">Loop</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>2.</comment>
+                <comment>It moves the line in different directions depending on pointer</comment>
+                <event-block sid="404948509698070">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="587401637714348" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="311452374962060" type="System">
+                            <param id="0" name="Variable">LINE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="582061077024985" type="Line">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="253697050152903" type="Line">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="898426894257723" type="Line">
+                            <param id="0" name="Width">distance(CellX,CellY, Touch.X, Touch.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>If no suitable cell is found, then stick to it. Make a last line inactive and create a new</comment>
+                <comment>Do all the same steps that were made and the first selected item</comment>
+                <event-block sid="158758670276065">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="522205520455427" type="Elements">
+                            <param id="0" name="Object">Line</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="714658514529306">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="145515812138951" type="Elements">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Type</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="583715286299589" type="Elements">
+                                    <param id="0" name="Instance variable">Touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="835953116641370" type="System">
+                                    <param id="0" name="First value">distance(Line.X, Line.Y, Elements.X, Elements.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">250</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="444204970299460" type="Function">
+                                    <param id="0" name="Name">&quot;take2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="879476289181131" type="Line">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="142176135864895" type="Line">
+                                    <param id="0" name="Width">distance(CellX,CellY, Elements.X, Elements.Y)</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="748008971624591" type="Line">
+                                    <param id="0" name="X">Elements.X</param>
+                                    <param id="1" name="Y">Elements.Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="103793179817838" type="System">
+                                    <param id="0" name="Object to create">Line</param>
+                                    <param id="1" name="Layer">&quot;Line&quot;</param>
+                                    <param id="2" name="X">Elements.X</param>
+                                    <param id="3" name="Y">Elements.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="740796618860127" type="Line">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="385165576971077" type="System">
+                                    <param id="0" name="Variable">CellX</param>
+                                    <param id="1" name="Value">Elements.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="978367183586979" type="System">
+                                    <param id="0" name="Variable">CellY</param>
+                                    <param id="1" name="Value">Elements.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="899352557950804" type="System">
+                                    <param id="0" name="Variable">LINE</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="320390066972984" type="Elements">
+                                    <param id="0" name="Instance variable">Touch</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="467068321007637" type="System">
+                                    <param id="0" name="Variable">Loop</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="214414317561670" type="Elements">
+                                    <param id="0" name="Frame number">Elements.AnimationFrame + FRAMES</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="386886226187178">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="547754177296703" type="System">
+                                            <param id="0" name="Object">Line</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="909384909939769" type="Line">
+                                            <param id="0" name="Instance variable">Active</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="532971085648869">
+                                            <conditions>
+                                                <condition id="-13" name="Pick nth instance" sid="315815448373447" type="System">
+                                                    <param id="0" name="Object">Line</param>
+                                                    <param id="1" name="Instance">Line.Count </param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="667561250221591" type="Line">
+                                                    <param id="0" name="Instance variable">Active</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>3.</comment>
+                <comment>IF TOUCH END</comment>
+                <comment></comment>
+                <event-block sid="739917672485723">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="697535118540473" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="427616240330878" type="Line" />
+                    </actions>
+                    <sub-events>
+                        <comment>If the chain was more than 2 elements, then destroy them</comment>
+                        <event-block sid="625573536247408">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="823623566204277" type="System">
+                                    <param id="0" name="First value">Loop</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="775978561592670" type="Function">
+                                    <param id="0" name="Name">&quot;CreateNewElements&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="314955379213453" type="Function">
+                                    <param id="0" name="Name">&quot;DestroyElements&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>If less, then destroy only the line and reset the local variables of pictures</comment>
+                        <event-block sid="503811539639544">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="782249352321166" type="System">
+                                    <param id="0" name="First value">Loop</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="586500503038289" type="System">
+                                    <param id="0" name="Variable">Loop</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="148992794068543" type="Elements">
+                                    <param id="0" name="Instance variable">Touch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="321362174251425">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="675370817338594" type="System">
+                                            <param id="0" name="Object">Elements</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="627021202475535">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="504256050508037" type="Elements">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="335865515810244" type="Elements">
+                                                    <param id="0" name="Frame number">Elements.AnimationFrame - FRAMES</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="472096134276829" title="BUTTONGAME3">
+            <sub-events>
+                <comment>Sound</comment>
+                <event-block sid="382029818805254">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="982215294775394" type="Touch">
+                            <param id="0" name="Object">btMenuSound</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="735604685450805" type="btMenuSound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="724721350462943" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="285555511205390" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="507840982048984" type="btMenuSound">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680104526192280">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="599806057143570" type="Touch">
+                            <param id="0" name="Object">btMenuSound</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="545510573266775" type="btMenuSound">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="731785795873821" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="869577693798725" type="btMenuSound">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888998177762203">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="101588964036220" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="961057936766757" type="btMenuSound">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Menu</comment>
+                <event-block sid="627827963387771">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="788077844673042" type="Touch">
+                            <param id="0" name="Object">btMenuGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="419890019237842" type="btMenuGame">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="400986341566836" type="btMenuGame">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="585140779297445" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="688912514651731" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="891742960889500" type="btMenuGame">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="436881382676413" type="BGMenuBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="742893800233387" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="866956549799134" type="btMenuClose">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="518341628336547" type="btMenuHome">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="610651464177133" type="btMenuResume">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="510279838008901" type="btMenuSound">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="993168020749132" type="btMenuStop">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="323771621519890" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="455052005491070" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="143195095784671" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812229471707965">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="383870093936755" type="Touch">
+                            <param id="0" name="Object">btMenuClose</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="195951319860752" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="909718081136922" type="btMenuClose">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="237096107418429" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="184089077825181" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="158683615457733" type="btMenuClose">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="563846002382436" type="BGMenuBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="438414857641595" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="425133982866117" type="btMenuClose">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="771937472527384" type="btMenuHome">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="944385386221288" type="btMenuResume">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="804653883538865" type="btMenuSound">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="627217421643786" type="btMenuStop">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="456607541000624" type="btMenuGame">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action disabled="1" id="5" name="Set frame" sid="262109338551670" type="btMenuSound">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="721473037712237" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659110781750147">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="144101016083983" type="Touch">
+                            <param id="0" name="Object">btMenuResume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="638251818726992" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="160658770499235" type="btMenuResume">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="235182917501740" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="591310035855340" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="326644911581522" type="btMenuResume">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="854437846050208" type="BGMenuBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="708265143338073" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="193104053136756" type="btMenuClose">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="693841349867949" type="btMenuHome">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="995630305043385" type="btMenuResume">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="948119076293080" type="btMenuSound">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="171917955822624" type="btMenuStop">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="199207418767348" type="btMenuGame">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="288319672299141" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="579047494043464" title="FUNCTIONSGAME3">
+            <sub-events>
+                <comment>After the destruction of elements to create in their place new ones.</comment>
+                <comment></comment>
+                <variable constant="0" name="X" sid="663154699576537" static="0" type="number">0</variable>
+                <variable constant="0" name="Y" sid="776235823613076" static="0" type="number">0</variable>
+                <variable constant="0" name="LocalScore" sid="493893641366229" static="0" type="number">0</variable>
+                <event-block sid="552414838391125">
+                    <conditions>
+                        <condition id="0" name="On function" sid="254426410521494" type="Function">
+                            <param id="0" name="Name">&quot;CreateNewElements&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="530197984838793">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="363103095970047" type="System">
+                                    <param id="0" name="Object">Elements</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="349388692001955" type="Elements">
+                                    <param id="0" name="Instance variable">Touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="346788142838988" type="System">
+                                    <param id="0" name="Variable">X</param>
+                                    <param id="1" name="Value">Elements.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="603377506377892" type="System">
+                                    <param id="0" name="Variable">Y</param>
+                                    <param id="1" name="Value">Elements.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="996930835934469" type="Elements" />
+                                <action id="-3" name="Create object" sid="526241031718347" type="System">
+                                    <param id="0" name="Object to create">Elements</param>
+                                    <param id="1" name="Layer">&quot;Elements&quot;</param>
+                                    <param id="2" name="X">X</param>
+                                    <param id="3" name="Y">Y-1000</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="508246420381949" type="Elements">
+                                    <param id="0" name="Frame number">floor(random(FRAMES))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="600024419030187" type="Elements">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">Elements.AnimationFrame+1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>If the item destroyed &gt;6, then give 50 points for each and add time for each</comment>
+                                <event-block sid="611357282700195">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="869229414827777" type="System">
+                                            <param id="0" name="Variable">Loop</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="460670161875993" type="System">
+                                            <param id="0" name="Variable">LocalScore</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="755244966768970" type="Function">
+                                            <param id="0" name="Name">&quot;CreateScoreUp&quot;</param>
+                                            <param id="1" name="Parameter {n}">X{###}Y{###}LocalScore</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="127285984374650" type="Function">
+                                            <param id="0" name="Name">&quot;Particles&quot;</param>
+                                            <param id="1" name="Parameter {n}">X{###}Y</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="886642971257726" type="System">
+                                            <param id="0" name="Variable">Score_Game3</param>
+                                            <param id="1" name="Value">Score_Game3 + 10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <comment>Function of destruction elements.</comment>
+                <comment></comment>
+                <event-block sid="436643123375718">
+                    <conditions>
+                        <condition id="0" name="On function" sid="853311533684811" type="Function">
+                            <param id="0" name="Name">&quot;DestroyElements&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="747383342078040" type="Function">
+                            <param id="0" name="Name">&quot;match3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="625757592654971" type="System">
+                            <param id="0" name="Variable">Loop</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Show drop-down points</comment>
+                <event-block sid="766105948337368">
+                    <conditions>
+                        <condition id="0" name="On function" sid="590993904228746" type="Function">
+                            <param id="0" name="Name">&quot;CreateScoreUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="872133019985022" type="System">
+                            <param id="0" name="Object to create">Upscore</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1) - 50</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="877372525201225" type="Upscore">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="778548962791978" type="Upscore">
+                            <param id="0" name="Text">&quot;+&quot;&amp; Function.Param(2)</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="337865296993730" type="Upscore">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="380203215016307" type="Upscore">
+                            <param id="0" name="Angle">random(265, 290)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="881693089983939" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="563061856206505" type="Upscore" />
+                    </actions>
+                </event-block>
+                <event-block sid="845110928462861">
+                    <conditions>
+                        <condition id="0" name="On function" sid="349876238090731" type="Function">
+                            <param id="0" name="Name">&quot;Particles&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="876550670760979" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="535128872518230" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="429172758246805" type="Particles" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="252696212995383" title="TIME_LEVEL1_GAME3">
+            <sub-events>
+                <event-block sid="207548181243551">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="135743171185023" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="592631306542211" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="858004895959476" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="115458430952180" type="SFSecondRight">
+                            <param id="0" name="Text">SecondRight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="483916059741276">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="199968922619079" type="System">
+                                    <param id="0" name="Variable">SecondRight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="795288639659701" type="System">
+                                    <param id="0" name="Variable">SecondLeft</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="418694071519265" type="System">
+                                    <param id="0" name="Variable">SecondRight</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="917942350805504" type="SFSecondRight">
+                                    <param id="0" name="Text">SecondRight</param>
+                                </action>
+                                <action id="0" name="Set text" sid="883972090803503" type="SFSecondLeft">
+                                    <param id="0" name="Text">SecondLeft</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="995294643036999">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="557832781994558" type="System">
+                                            <param id="0" name="Variable">SecondLeft</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="183134257099106" type="System">
+                                            <param id="0" name="Variable">SecondLeft</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="226507926958696" type="System">
+                                            <param id="0" name="Variable">SecondRight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="145248849684734" type="System">
+                                            <param id="0" name="Variable">MinuteRight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="837010307309948" type="SFSecondLeft">
+                                            <param id="0" name="Text">SecondLeft</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="407637139177735" type="SFSecondRight">
+                                            <param id="0" name="Text">SecondRight</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="441475102528290" type="SFMinuteRight">
+                                            <param id="0" name="Text">MinuteRight</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="312091545207519">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="128965535810961" type="System">
+                                                    <param id="0" name="Variable">MinuteRight</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="814898472834374" type="System">
+                                                    <param id="0" name="Variable">MinuteRight</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="156894659536438" type="System">
+                                                    <param id="0" name="Variable">MinuteLeft</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="713651924840858" type="SFMinuteLeft">
+                                                    <param id="0" name="Text">MinuteLeft</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="150783986420512" type="SFMinuteRight">
+                                                    <param id="0" name="Text">MinuteRight</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="970121024861586" title="GAMEOVERGAME3">
+            <sub-events>
+                <event-block sid="678222924417325">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="812551096614164" type="Touch">
+                            <param id="0" name="Object">btGameOverHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="931475205076742" type="btGameOverHome">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="493029719108977" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="635260704887687" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="486353309122044" type="btGameOverHome">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="928765096510298" type="System">
+                            <param id="0" name="Variable">Score_Game3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="777001601245616" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="770134269824252" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

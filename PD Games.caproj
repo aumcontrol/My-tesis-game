@@ -1,0 +1,2090 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>PD Games</name>
+    <description>Parkinson Game from chula</description>
+    <version>1.0.0.0</version>
+    <author>Patipong&amp;Thanawit</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id>com.chula.kmutnb</app-id>
+    <unique-id>39lwpppqb4wec</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>SplashScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Edge</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="SplashScreen">
+            <object-type name="BGSplashScreen" sid="712690504954447">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="929467304967675">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865326273865587" speed="5">
+                        <frame duration="1" hotspotX="0.500597" hotspotY="0.500597" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\SplashScreen\logo.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Login">
+            <object-type name="BGLogin" sid="171629666987127">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="973162289895497">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="976631659301994">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201952464507076" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Menu\BGMenu1.png">
+                            <collision-poly>
+                                <point x="0.000520833" y="0.000925926" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGtxtLogin" sid="900946024418824">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="831347118032605">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993077615440534" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500699" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Login\Login.png">
+                            <collision-poly>
+                                <point x="0.182292" y="0.244755" />
+                                <point x="0.5" y="0.13007" />
+                                <point x="0.817708" y="0.244755" />
+                                <point x="0.854167" y="0.499301" />
+                                <point x="0.854167" y="0.804196" />
+                                <point x="0.5" y="0.883916" />
+                                <point x="0.145833" y="0.804196" />
+                                <point x="0.145833" y="0.499301" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btnLogin" sid="345190094141783">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="774780100645161">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528013021931086" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Login\LoginButton.png">
+                            <collision-poly>
+                                <point x="0.0139319" y="0.0891089" />
+                                <point x="0.5" y="0.0594059" />
+                                <point x="0.986068" y="0.0891089" />
+                                <point x="0.986068" y="0.910891" />
+                                <point x="0.5" y="0.940594" />
+                                <point x="0.0139319" y="0.910891" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtLogin" sid="124833593458482">
+                <plugin id="TextBox" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="291862046217082">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="CircleLogin" sid="161311616051691">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="226261748317610">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="190173113162019">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="874244246609602">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709152945292759" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Login\CircleLogin.png">
+                            <collision-poly>
+                                <point x="0.146245" y="0.146245" />
+                                <point x="0.5" y="0" />
+                                <point x="0.853755" y="0.146245" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853755" y="0.853755" />
+                                <point x="0.5" y="1" />
+                                <point x="0.146245" y="0.853755" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtInvalid" sid="995376066763655">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="910455923716294">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Tulip" sid="578463510518372">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="MyTulip" sid="895622826592898" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="225947378674258">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="579769940611572">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="840605800707036">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="976972072827818">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397895138508057" speed="0">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Untitled-1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.00119617" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.00119617" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.00119617" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector2.png">
+                            <collision-poly>
+                                <point x="0.145089" y="0.0777512" />
+                                <point x="0.5" y="0.00119617" />
+                                <point x="0.857143" y="0.076555" />
+                                <point x="0.991071" y="0.5" />
+                                <point x="0.582589" y="0.776316" />
+                                <point x="0.5" y="1" />
+                                <point x="0.417411" y="0.776316" />
+                                <point x="0.0111607" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ai_chula" sid="493218406778774">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="411499710671845">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811199689862151" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\—Pngtree—vector web icon_3997299.png">
+                            <collision-poly>
+                                <point x="0.147461" y="0.147461" />
+                                <point x="0.5" y="0.00195313" />
+                                <point x="0.852539" y="0.147461" />
+                                <point x="1" y="0.5" />
+                                <point x="0.854492" y="0.854492" />
+                                <point x="0.5" y="1" />
+                                <point x="0.146484" y="0.853516" />
+                                <point x="0.000976563" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Text_aichula" sid="734839362963293">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="800379499197719">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="Menu">
+            <object-folder name="LevelGame2">
+                <object-type name="BGLevelGame2" sid="330385084679719">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="255567807647741">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964895321596642" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Window_03.png">
+                                <collision-poly>
+                                    <point x="0.0948276" y="0.11828" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.905172" y="0.11828" />
+                                    <point x="0.989943" y="0.5" />
+                                    <point x="0.979885" y="0.97491" />
+                                    <point x="0.0158046" y="0.980287" />
+                                    <point x="0.00143678" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btExitLevelGame2" sid="347171630164993">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="473740509991943">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719198753983912" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_23.png">
+                                <collision-poly>
+                                    <point x="0.076087" y="0.0729167" />
+                                    <point x="0.5" y="0.0104167" />
+                                    <point x="0.913043" y="0.0833333" />
+                                    <point x="0.967391" y="0.5" />
+                                    <point x="0.891304" y="0.895833" />
+                                    <point x="0.5" y="0.947917" />
+                                    <point x="0.0869565" y="0.916667" />
+                                    <point x="0.0108696" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level1_Game2" sid="786076845339555">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="259308412669292">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902323368591723" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_01.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level2_Game2" sid="279690985192086">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="822456264029238">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767359675661018" speed="5">
+                            <frame duration="1" hotspotX="0.50365" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_02.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level3_Game2" sid="363572828922704">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="602516487904882">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847554608110604" speed="5">
+                            <frame duration="1" hotspotX="0.50365" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_03.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BGBlack" sid="484771458987997">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="622694087923158">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="560081765396931" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\1717215_0553013391_maxresdefault_o.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level4_Game2" sid="735503550505414">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="546502800615663">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528675806717122" speed="5">
+                            <frame duration="1" hotspotX="0.50365" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_04.png">
+                                <collision-poly>
+                                    <point x="0.0729927" y="0.0699301" />
+                                    <point x="0.49635" y="0" />
+                                    <point x="0.912409" y="0.0839161" />
+                                    <point x="0.978102" y="0.496504" />
+                                    <point x="0.89781" y="0.902098" />
+                                    <point x="0.49635" y="0.951049" />
+                                    <point x="0.0948905" y="0.909091" />
+                                    <point x="0.00729927" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="LevelGame3">
+                <object-type name="Level1_Game3" sid="891122272737115">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="873476260579526">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667170364539606" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_01.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level2_Game3" sid="803661285583306">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="277250379402740">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582626312114360" speed="5">
+                            <frame duration="1" hotspotX="0.50365" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_02.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Level3_Game3" sid="520148860799796">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="823612455539294">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312406320195747" speed="5">
+                            <frame duration="1" hotspotX="0.50365" hotspotY="0.503497" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\Button_03.png">
+                                <collision-poly>
+                                    <point x="0.0724638" y="0.0699301" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.913043" y="0.0839161" />
+                                    <point x="0.971014" y="0.496504" />
+                                    <point x="0.891304" y="0.895105" />
+                                    <point x="0.5" y="0.951049" />
+                                    <point x="0.0942029" y="0.909091" />
+                                    <point x="0.00724638" y="0.496504" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="BGMenu1" sid="545394948639960">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="899429659083759">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841152875736791" speed="5">
+                        <frame duration="1" hotspotX="0.500301" hotspotY="0.501433" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Old man.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.511511" />
+                                <point x="1" y="1" />
+                                <point x="0" y="0.972544" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGMenu" sid="623702091013595">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="884948951029769">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668585502983347" speed="5">
+                        <frame duration="1" hotspotX="0.500514" hotspotY="0.501372" original-source="C:\Users\Aumcontrol\Desktop\BGMenu1.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGWelcome" sid="837447080842962">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723789608293772" speed="5">
+                        <frame duration="1" hotspotX="0.500599" hotspotY="0.5" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Menu\Welcome.png">
+                            <collision-poly>
+                                <point x="0.0323353" y="0.207692" />
+                                <point x="0.499401" y="0.1" />
+                                <point x="0.984431" y="0.1" />
+                                <point x="0.937725" y="0.6" />
+                                <point x="0.499401" y="0.9" />
+                                <point x="0.0155689" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btGame1" sid="611121871920760">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803335668655159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\Aumcontrol\Desktop\UI\Menu\btnG11.png">
+                            <collision-poly>
+                                <point x="0.1125" y="0.30566" />
+                                <point x="0.5" y="0.135849" />
+                                <point x="0.8875" y="0.30566" />
+                                <point x="0.8875" y="0.69434" />
+                                <point x="0.5" y="0.867925" />
+                                <point x="0.1125" y="0.69434" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btgame2" sid="317673273027582">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="975992153711570" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\Aumcontrol\Desktop\UI\Menu\btnG22.png">
+                            <collision-poly>
+                                <point x="0.1125" y="0.30566" />
+                                <point x="0.5" y="0.135849" />
+                                <point x="0.8875" y="0.30566" />
+                                <point x="0.8875" y="0.69434" />
+                                <point x="0.5" y="0.867925" />
+                                <point x="0.1125" y="0.69434" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btGame3" sid="150613878419868">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909420860930582" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\Aumcontrol\Desktop\UI\Menu\btnG33.png">
+                            <collision-poly>
+                                <point x="0.1125" y="0.30566" />
+                                <point x="0.5" y="0.135849" />
+                                <point x="0.8875" y="0.30566" />
+                                <point x="0.8875" y="0.69434" />
+                                <point x="0.5" y="0.867925" />
+                                <point x="0.1125" y="0.69434" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txtWelcome" sid="417916140114831">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SoundMenu" sid="705567556719435">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="552463556185043">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273195327583410" speed="0">
+                        <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\Music (1).png">
+                            <collision-poly>
+                                <point x="0.108844" y="0.108844" />
+                                <point x="0.496599" y="0" />
+                                <point x="0.891156" y="0.108844" />
+                                <point x="1" y="0.496599" />
+                                <point x="0.897959" y="0.897959" />
+                                <point x="0.496599" y="1" />
+                                <point x="0.102041" y="0.897959" />
+                                <point x="0.00680272" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\Music (4).png">
+                            <collision-poly>
+                                <point x="0.108844" y="0.108844" />
+                                <point x="0.496599" y="0" />
+                                <point x="0.891156" y="0.108844" />
+                                <point x="0.993197" y="0.496599" />
+                                <point x="0.897959" y="0.897959" />
+                                <point x="0.496599" y="1" />
+                                <point x="0.102041" y="0.897959" />
+                                <point x="0.00680272" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btLogout" sid="338195217990221">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792605449279286" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\png\Exit (3).png">
+                            <collision-poly>
+                                <point x="0.109589" y="0.108844" />
+                                <point x="0.5" y="0" />
+                                <point x="0.890411" y="0.108844" />
+                                <point x="1" y="0.496599" />
+                                <point x="0.90411" y="0.904762" />
+                                <point x="0.5" y="1" />
+                                <point x="0.10274" y="0.897959" />
+                                <point x="0" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btGameRule2" sid="256154720084864">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="364931088260565">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236173070763961" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\กฏกติกาเกมจับคู่ภาพยา.png">
+                            <collision-poly>
+                                <point x="0.1125" y="0.30566" />
+                                <point x="0.5" y="0.135849" />
+                                <point x="0.8875" y="0.30566" />
+                                <point x="0.8875" y="0.69434" />
+                                <point x="0.5" y="0.867925" />
+                                <point x="0.1125" y="0.69434" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btGameRule3" sid="598648650351220">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="141469973364943">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552325190247825" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\กฏกติกาเกมปริศนายา.png">
+                            <collision-poly>
+                                <point x="0.1125" y="0.30566" />
+                                <point x="0.5" y="0.135849" />
+                                <point x="0.8875" y="0.30566" />
+                                <point x="0.8875" y="0.69434" />
+                                <point x="0.5" y="0.867925" />
+                                <point x="0.1125" y="0.69434" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="UI_Game3">
+            <object-folder name="Game">
+                <object-type name="Ground" sid="769760258935827">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="537644360673681">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743148502230187" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Game2\UI\Ground.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BGBackgroundGame3" sid="867793639358881">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630969929048522" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Game2\UI\BackgroundGame.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ScoreLevel1_Game3" sid="704282084249859">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\BlueFont.png" />
+                </object-type>
+                <object-type name="Particles" sid="160222286650613">
+                    <plugin id="Particles" />
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\Game3\UI\Particles.png" />
+                </object-type>
+                <object-type name="Elements" sid="378929513421737">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Touch" sid="490642624675197" type="number" />
+                        <instance-variable name="Type" sid="139816759453761" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Platform" sid="977149693266411">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                        <behavior-type name="Solid" sid="580189454175248">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="10" loop="0" name="F1" pingpong="0" repeatcount="1" repeatto="0" sid="980588846248567" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\1.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\2.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\3.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\4.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\5.png">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="1" y="0" />
+                                    <point x="0" y="0" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\6.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\7.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\8.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\9.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level1\10.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="10" loop="0" name="F2" pingpong="0" repeatcount="1" repeatto="0" sid="725861891927005" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\1.png">
+                                <collision-poly>
+                                    <point x="0.988" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\2.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="2.23517e-008" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\3.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\4.png">
+                                <collision-poly>
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\5.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.996" />
+                                    <point x="0" y="0.996" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\6.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.992" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\7.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="0.988" y="1" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\8.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\9.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level2\10.png" />
+                        </animation>
+                        <animation framecount="10" loop="0" name="F3" pingpong="0" repeatcount="1" repeatto="0" sid="375956308402142" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\1.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\2.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\3.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\4.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\5.png">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="1" y="0" />
+                                    <point x="0" y="0" />
+                                    <point x="0" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\6.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\7.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\8.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\9.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Censored\Game3\Level3\10.png">
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Upscore" sid="570251603241784">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="788275644666563">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="529356423925878">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\WhiteFont.png" />
+                </object-type>
+                <object-type name="Line" sid="930683730220470">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Active" sid="401065526137815" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="318373459068263" speed="5">
+                            <frame duration="1" hotspotX="-0.00632911" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Game3\UI\Line.png">
+                                <collision-poly>
+                                    <point x="0.0949367" y="0.122951" />
+                                    <point x="0.5" y="0.00819672" />
+                                    <point x="0.905063" y="0.122951" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.905063" y="0.877049" />
+                                    <point x="0.5" y="0.991803" />
+                                    <point x="0.0886076" y="0.885246" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LevelText" sid="435099738624412">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\BlueFont.png" />
+                </object-type>
+                <object-type name="ProgressSlodeBar" sid="329060559914617">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="396888027696176">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791530941273808" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Game3\UI\ProgressSlodeBar.png">
+                                <collision-poly>
+                                    <point x="0.2" y="0.2" />
+                                    <point x="0.5" y="0.076" />
+                                    <point x="0.8" y="0.2" />
+                                    <point x="0.928" y="0.5" />
+                                    <point x="0.808" y="0.808" />
+                                    <point x="0.5" y="0.94" />
+                                    <point x="0.192" y="0.808" />
+                                    <point x="0.068" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ProgressBack" sid="784559276192334">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849296612594010" speed="5">
+                            <frame duration="1" hotspotX="-0.008" hotspotY="0.476" original-source="C:\Users\Aumcontrol\Desktop\UI\Game3\UI\ProgressBack.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ProgressBar" sid="130514158586344">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767555715511549" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Game3\UI\ProgressBar.png">
+                                <collision-poly>
+                                    <point x="0.0369048" y="0.316327" />
+                                    <point x="0.5" y="0.367347" />
+                                    <point x="0.966667" y="0.285714" />
+                                    <point x="0.986905" y="0.5" />
+                                    <point x="0.97619" y="0.795918" />
+                                    <point x="0.0202381" y="0.826531" />
+                                    <point x="0.00833333" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="WallTest" sid="733166034410818">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="521388394844980" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\ยังไม่ได้ดู\Platformer Art Complete Pack_0\Candy expansion\Tiles\choco.png">
+                                <collision-poly>
+                                    <point x="0.133929" y="0.0964286" />
+                                    <point x="0.485714" y="0.0625" />
+                                    <point x="0.869643" y="0.101786" />
+                                    <point x="0.926786" y="0.482143" />
+                                    <point x="0.8625" y="0.883929" />
+                                    <point x="0.507143" y="0.907143" />
+                                    <point x="0.153571" y="0.860715" />
+                                    <point x="0.0625" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ScoreLevel2_Game3" sid="915238780380851">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\BlueFont.png" />
+                </object-type>
+                <object-type name="ScoreLevel3_Game3" sid="930048678795520">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\Construct 2\Test\Test เกม Candy crush\sweetworld\textures\BlueFont.png" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Game Over">
+                <object-type name="BGGameOverBlack" sid="578701545393403">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="210135894780719">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="111381616929733" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\1717215_0553013391_maxresdefault_o.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BGGameOver" sid="185112654174918">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="253711611136630">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209075338326283" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\GameOver\Window_03.png">
+                                <collision-poly>
+                                    <point x="0.0948276" y="0.11828" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.905172" y="0.11828" />
+                                    <point x="0.989943" y="0.5" />
+                                    <point x="0.979885" y="0.97491" />
+                                    <point x="0.0158046" y="0.980287" />
+                                    <point x="0.00143678" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btGameOverHome" sid="486906762082633">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="652272163154691">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982526908900985" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\GameOver\Text (3).png">
+                                <collision-poly>
+                                    <point x="0.0522876" y="0.108108" />
+                                    <point x="0.5" y="0.00675676" />
+                                    <point x="0.947712" y="0.108108" />
+                                    <point x="0.996732" y="0.5" />
+                                    <point x="0.95098" y="0.898649" />
+                                    <point x="0.5" y="0.993243" />
+                                    <point x="0.0490196" y="0.898649" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SFScoreGameOver" sid="375546208663236">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="123760396282660">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\WhiteFont.png" />
+                </object-type>
+                <object-type name="SFTimeGameOver" sid="155400676708906">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="457892728255125">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\Aumcontrol\Desktop\UI\SpriteFont\WhiteFont.png" />
+                </object-type>
+                <object-type name="BGGameOverLevel1_Game3" sid="747339257871894">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="283538557996137" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\Construct 2\Test\Test เกม Candy crush\sweetworld\textures\Background2.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Menu">
+                <object-type name="BGMenuLevel1_Game3" sid="151561791388528">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="938847164300880">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890153985403553" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\ScreenMenu\Window_03.png">
+                                <collision-poly>
+                                    <point x="0.0948276" y="0.11828" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.905172" y="0.11828" />
+                                    <point x="0.989943" y="0.5" />
+                                    <point x="0.979885" y="0.97491" />
+                                    <point x="0.0158046" y="0.980287" />
+                                    <point x="0.00143678" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuResume" sid="284719864704511">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="565430740449677">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528740243267685" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\ScreenMenu\Text (1).png">
+                                <collision-poly>
+                                    <point x="0.0522876" y="0.108108" />
+                                    <point x="0.5" y="0.00675676" />
+                                    <point x="0.947712" y="0.108108" />
+                                    <point x="0.996732" y="0.5" />
+                                    <point x="0.95098" y="0.898649" />
+                                    <point x="0.5" y="0.993243" />
+                                    <point x="0.0490196" y="0.898649" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuStop" sid="808540156097227">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="288557283615391">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608180606490430" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\ScreenMenu\Text (2).png">
+                                <collision-poly>
+                                    <point x="0.0522876" y="0.108108" />
+                                    <point x="0.5" y="0.00675676" />
+                                    <point x="0.947712" y="0.108108" />
+                                    <point x="0.996732" y="0.5" />
+                                    <point x="0.95098" y="0.898649" />
+                                    <point x="0.5" y="0.993243" />
+                                    <point x="0.0490196" y="0.898649" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuHome" sid="867570472376879">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="142803285941085">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114394761543862" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\ScreenMenu\Text (3).png">
+                                <collision-poly>
+                                    <point x="0.0522876" y="0.108108" />
+                                    <point x="0.5" y="0.00675676" />
+                                    <point x="0.947712" y="0.108108" />
+                                    <point x="0.996732" y="0.5" />
+                                    <point x="0.95098" y="0.898649" />
+                                    <point x="0.5" y="0.993243" />
+                                    <point x="0.0490196" y="0.898649" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuClose" sid="421207779025823">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="335405653922986">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="620329994136548" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\ScreenMenu\Button_23.png">
+                                <collision-poly>
+                                    <point x="0.076087" y="0.0729167" />
+                                    <point x="0.5" y="0.0104167" />
+                                    <point x="0.913043" y="0.0833333" />
+                                    <point x="0.967391" y="0.5" />
+                                    <point x="0.891304" y="0.895833" />
+                                    <point x="0.5" y="0.947917" />
+                                    <point x="0.0869565" y="0.916667" />
+                                    <point x="0.0108696" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BGMenuBlack" sid="124961876293166">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="562114908073093">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296730063881544" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\1717215_0553013391_maxresdefault_o.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuSound" sid="684283568626893">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="134619032419522">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="263666877078386" speed="0">
+                            <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\sound\Music (1).png">
+                                <collision-poly>
+                                    <point x="0.108844" y="0.108844" />
+                                    <point x="0.496599" y="0" />
+                                    <point x="0.891156" y="0.108844" />
+                                    <point x="1" y="0.496599" />
+                                    <point x="0.897959" y="0.897959" />
+                                    <point x="0.496599" y="1" />
+                                    <point x="0.102041" y="0.897959" />
+                                    <point x="0.00680272" y="0.496599" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\sound\Music (4).png">
+                                <collision-poly>
+                                    <point x="0.108844" y="0.108844" />
+                                    <point x="0.496599" y="0" />
+                                    <point x="0.891156" y="0.108844" />
+                                    <point x="0.993197" y="0.496599" />
+                                    <point x="0.897959" y="0.897959" />
+                                    <point x="0.496599" y="1" />
+                                    <point x="0.102041" y="0.897959" />
+                                    <point x="0.00680272" y="0.496599" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btMenuGame" sid="672845726872774">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713059789060217" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\png\LevelList (1).png">
+                                <collision-poly>
+                                    <point x="0.109589" y="0.108844" />
+                                    <point x="0.5" y="0.00680272" />
+                                    <point x="0.890411" y="0.108844" />
+                                    <point x="1" y="0.496599" />
+                                    <point x="0.90411" y="0.904762" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.10274" y="0.897959" />
+                                    <point x="0" y="0.496599" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.503401" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="UI_game2">
+            <object-folder name="Game2">
+                <object-type name="Card" sid="133512797757097">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Mycard" sid="122974720993247" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="258275639144715">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                        <behavior-type name="Fade" sid="575270069637065">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="261619160315714" speed="0">
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หลังการ์ด\BC.png">
+                                <collision-poly>
+                                    <point x="0.00790514" y="0.00531915" />
+                                    <point x="0.98419" y="0.0106383" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.98419" y="0.989362" />
+                                    <point x="0.0158103" y="0.989362" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="12" loop="0" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="451958103353244" speed="0">
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_1.png">
+                                <collision-poly>
+                                    <point x="0.0505415" y="0.0387812" />
+                                    <point x="0.498195" y="0" />
+                                    <point x="0.949458" y="0.0387812" />
+                                    <point x="1" y="0.498615" />
+                                    <point x="0.949458" y="0.961219" />
+                                    <point x="0.498195" y="1" />
+                                    <point x="0.0505415" y="0.961219" />
+                                    <point x="0" y="0.498615" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_2.png">
+                                <collision-poly>
+                                    <point x="0.497608" y="0.232704" />
+                                    <point x="0.909091" y="0.119497" />
+                                    <point x="0.894737" y="0.496855" />
+                                    <point x="0.497608" y="0.779874" />
+                                    <point x="0.0813397" y="0.893082" />
+                                    <point x="0.129187" y="0.496855" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_3.png">
+                                <collision-poly>
+                                    <point x="0.497608" y="0.232704" />
+                                    <point x="0.909091" y="0.119497" />
+                                    <point x="0.894737" y="0.496855" />
+                                    <point x="0.497608" y="0.779874" />
+                                    <point x="0.0813397" y="0.893082" />
+                                    <point x="0.129187" y="0.496855" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_4.png">
+                                <collision-poly>
+                                    <point x="0.0505415" y="0.0387812" />
+                                    <point x="0.498195" y="0" />
+                                    <point x="0.949458" y="0.0387812" />
+                                    <point x="1" y="0.498615" />
+                                    <point x="0.949458" y="0.961219" />
+                                    <point x="0.498195" y="1" />
+                                    <point x="0.0505415" y="0.961219" />
+                                    <point x="0" y="0.498615" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504167" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_5.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.125" />
+                                    <point x="0.924107" y="0.0758929" />
+                                    <point x="0.870536" y="0.5" />
+                                    <point x="0.5" y="0.870536" />
+                                    <point x="0.0758929" y="0.924107" />
+                                    <point x="0.125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_6.png">
+                                <collision-poly>
+                                    <point x="0.497608" y="0.232704" />
+                                    <point x="0.909091" y="0.119497" />
+                                    <point x="0.894737" y="0.496855" />
+                                    <point x="0.497608" y="0.779874" />
+                                    <point x="0.0813397" y="0.893082" />
+                                    <point x="0.129187" y="0.496855" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_7.png">
+                                <collision-poly>
+                                    <point x="0.0505415" y="0.0387812" />
+                                    <point x="0.498195" y="0" />
+                                    <point x="0.949458" y="0.0387812" />
+                                    <point x="1" y="0.498615" />
+                                    <point x="0.949458" y="0.961219" />
+                                    <point x="0.498195" y="1" />
+                                    <point x="0.0505415" y="0.961219" />
+                                    <point x="0" y="0.498615" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_8.png">
+                                <collision-poly>
+                                    <point x="0.0505415" y="0.0387812" />
+                                    <point x="0.498195" y="0" />
+                                    <point x="0.949458" y="0.0387812" />
+                                    <point x="1" y="0.498615" />
+                                    <point x="0.949458" y="0.961219" />
+                                    <point x="0.498195" y="1" />
+                                    <point x="0.0505415" y="0.961219" />
+                                    <point x="0" y="0.498615" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501389" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_9.png">
+                                <collision-poly>
+                                    <point x="0.0505415" y="0.0387812" />
+                                    <point x="0.498195" y="0" />
+                                    <point x="0.949458" y="0.0387812" />
+                                    <point x="1" y="0.498615" />
+                                    <point x="0.949458" y="0.961219" />
+                                    <point x="0.498195" y="1" />
+                                    <point x="0.0505415" y="0.961219" />
+                                    <point x="0" y="0.498615" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.504167" hotspotY="0.501031" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_10.png">
+                                <collision-poly>
+                                    <point x="0.497608" y="0.232704" />
+                                    <point x="0.909091" y="0.119497" />
+                                    <point x="0.894737" y="0.496855" />
+                                    <point x="0.497608" y="0.779874" />
+                                    <point x="0.0813397" y="0.893082" />
+                                    <point x="0.129187" y="0.496855" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_11.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\รูปยา\หน้าการ์ด\FC_12.png" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="FC_LEVEL1" pingpong="0" repeatcount="1" repeatto="0" sid="854881464494319" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_1.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_3.png" />
+                        </animation>
+                        <animation framecount="5" loop="0" name="FC_LEVEL2" pingpong="0" repeatcount="1" repeatto="0" sid="610229371421087" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_5.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_9.png" />
+                        </animation>
+                        <animation framecount="8" loop="0" name="FC_LEVEL3" pingpong="0" repeatcount="1" repeatto="0" sid="212179767777855" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_5.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_6.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_7.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_8.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_10.png" />
+                        </animation>
+                        <animation framecount="10" loop="0" name="FC_LEVEL4" pingpong="0" repeatcount="1" repeatto="0" sid="753108648859624" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_3.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_4.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_5.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_6.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_7.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_8.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_9.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_11.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\รูปยา\หน้าการ์ด\รูปหน้าการ์ด ไม่มีชื่อยา\FC_12.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Cardpos" sid="355387319978719">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="used" sid="283636242581397" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605884903180981" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SFScoreTrue" sid="206063914832949">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\Scoretrue.png" />
+                </object-type>
+                <object-type name="SFSemi" sid="546883852310117">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\Scoretrue.png" />
+                </object-type>
+                <object-type name="SFScoreFalse" sid="831618975787492">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\Scorefalse.png" />
+                </object-type>
+                <object-type name="SFSecondRight" sid="228821558130623">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\SFScoreGameOver.png" />
+                </object-type>
+                <object-type name="SFSecondLeft" sid="992123884182564">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\SFScoreGameOver.png" />
+                </object-type>
+                <object-type name="SFSemi2" sid="494255762429598">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\SFScoreGameOver.png" />
+                </object-type>
+                <object-type name="SFMinuteRight" sid="920362807889796">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\SFScoreGameOver.png" />
+                </object-type>
+                <object-type name="SFMinuteLeft" sid="749879915339047">
+                    <plugin id="Spritefont2" />
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\SFScoreGameOver.png" />
+                </object-type>
+                <object-type name="Tulip4" sid="287395361652469">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="MyTulip" sid="881348032312811" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="721214239732955">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="DestroyOutsideLayout" sid="480819915341996">
+                            <behavior id="destroy" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="456053106493568">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239072595315991" speed="0">
+                            <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Untitled-1.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0.00119617" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.5" />
+                                    <point x="1" y="1" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0.00119617" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.5" />
+                                    <point x="1" y="1" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector1.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.5" y="0.00119617" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.5" />
+                                    <point x="1" y="1" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\tulip vector2.png">
+                                <collision-poly>
+                                    <point x="0.145089" y="0.0777512" />
+                                    <point x="0.5" y="0.00119617" />
+                                    <point x="0.857143" y="0.076555" />
+                                    <point x="0.991071" y="0.5" />
+                                    <point x="0.582589" y="0.776316" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.417411" y="0.776316" />
+                                    <point x="0.0111607" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BGGame2" sid="627478848603540">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="135332659353113">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760662939787810" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\Level Select\1717215_0553013391_maxresdefault_o.jpg" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="GameOver2">
+                <object-type name="SFScoreTrue_GameOver" sid="837534020450882">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="880934583747037">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\Scoretrue.png" />
+                </object-type>
+                <object-type name="SFScoreFalse_GameOver" sid="497160109007174">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="900775559380185">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Users\Tle\Dropbox\My PC (LAPTOP-22O9CORE)\Desktop\Main301163_1705Game3Finish\Textures\Scorefalse.png" />
+                </object-type>
+                <object-type name="BG_GameOver" sid="598108213915626">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916241452925365" speed="5">
+                            <frame duration="1" hotspotX="0.500521" hotspotY="0.5" original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Untitled-1.png">
+                                <collision-poly>
+                                    <point x="0.316146" y="0.562037" />
+                                    <point x="0.5" y="0.337963" />
+                                    <point x="0.825" y="0.311111" />
+                                    <point x="0.959896" y="0.5" />
+                                    <point x="0.881771" y="0.789815" />
+                                    <point x="0.5" y="0.596296" />
+                                    <point x="0.101042" y="0.82037" />
+                                    <point x="0.0390625" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Circle_GameOver" sid="654349610152915">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Rotate" sid="507940649267506">
+                            <behavior id="Rotate" />
+                        </behavior-type>
+                        <behavior-type name="Fade" sid="534456258499524">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="917582150246924">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664952940624011" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\ไฟล์งาน มจพ\ปี 4 เทอม 1\Project\img\Login\CircleLogin.png">
+                                <collision-poly>
+                                    <point x="0.146245" y="0.146245" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.853755" y="0.146245" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.853755" y="0.853755" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.146245" y="0.853755" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="New folder" />
+        </object-folder>
+        <object-folder name="UI_Parkinson&apos;s Details">
+            <object-type name="BGParkinsonsDetail" sid="864960769457666">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="134449659464426">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="21" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499336624804315" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails9.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails11.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails12.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails13.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails14.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails15.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails16.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails17.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails18.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails19.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails20.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s Details\Details\Datails21.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Back" sid="984512106456790">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762028592808897" speed="0">
+                        <frame duration="1" hotspotX="0.494624" hotspotY="0.5" original-source="G:\ไดรฟ์ที่แชร์\Project Parkinson Patient’s Development Analysis Game\UI\ยังไม่ได้ดู\platformer-assets\Platformer\GUI\gui\button\Button_48.png">
+                            <collision-poly>
+                                <point x="0.989247" y="0.5" />
+                                <point x="0.903226" y="0.90625" />
+                                <point x="0.505376" y="0.947917" />
+                                <point x="0.107527" y="0.895833" />
+                                <point x="0.0322581" y="0.5" />
+                                <point x="0.0967742" y="0.09375" />
+                                <point x="0.505376" y="0.0104167" />
+                                <point x="0.924731" y="0.0729167" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="G:\ไดรฟ์ที่แชร์\Project Parkinson Patient’s Development Analysis Game\UI\ยังไม่ได้ดู\platformer-assets\Platformer\GUI\gui\button\Button_49.png">
+                            <collision-poly>
+                                <point x="0.989247" y="0.5" />
+                                <point x="0.903226" y="0.90625" />
+                                <point x="0.505376" y="0.947917" />
+                                <point x="0.107527" y="0.895833" />
+                                <point x="0.0322581" y="0.5" />
+                                <point x="0.0967742" y="0.09375" />
+                                <point x="0.505376" y="0.0104167" />
+                                <point x="0.924731" y="0.0729167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Next" sid="920163161453350">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867065552536699" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\ไดรฟ์ที่แชร์\Project Parkinson Patient’s Development Analysis Game\UI\ยังไม่ได้ดู\platformer-assets\Platformer\GUI\gui\button\Button_47.png">
+                            <collision-poly>
+                                <point x="0.076087" y="0.0729167" />
+                                <point x="0.5" y="0.0104167" />
+                                <point x="0.902174" y="0.09375" />
+                                <point x="0.967391" y="0.5" />
+                                <point x="0.891304" y="0.895833" />
+                                <point x="0.5" y="0.947917" />
+                                <point x="0.0869565" y="0.916667" />
+                                <point x="0.0108696" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="G:\ไดรฟ์ที่แชร์\Project Parkinson Patient’s Development Analysis Game\UI\ยังไม่ได้ดู\platformer-assets\Platformer\GUI\gui\button\Button_49.png">
+                            <collision-poly>
+                                <point x="0.076087" y="0.0729167" />
+                                <point x="0.5" y="0.0104167" />
+                                <point x="0.902174" y="0.09375" />
+                                <point x="0.967391" y="0.5" />
+                                <point x="0.891304" y="0.895833" />
+                                <point x="0.5" y="0.947917" />
+                                <point x="0.0869565" y="0.916667" />
+                                <point x="0.0108696" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BTBackMenu" sid="267746885811445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523513339811299" speed="0">
+                        <frame duration="1" hotspotX="0.26" hotspotY="0.29" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\png\Home (3).png">
+                            <collision-poly>
+                                <point x="0.0187871" y="0.013245" />
+                                <point x="0.981213" y="0.013245" />
+                                <point x="0.981213" y="0.986755" />
+                                <point x="0.0187871" y="0.986755" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SoundDetails" sid="180409057533267">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="413104802357891">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452367250063774" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\Music (1).png">
+                            <collision-poly>
+                                <point x="0.108844" y="0.108844" />
+                                <point x="0.496599" y="0" />
+                                <point x="0.891156" y="0.108844" />
+                                <point x="1" y="0.496599" />
+                                <point x="0.897959" y="0.897959" />
+                                <point x="0.496599" y="1" />
+                                <point x="0.102041" y="0.897959" />
+                                <point x="0.00680272" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aumcontrol\Desktop\UI\MainMenu\Music (4).png">
+                            <collision-poly>
+                                <point x="0.108844" y="0.108844" />
+                                <point x="0.496599" y="0" />
+                                <point x="0.891156" y="0.108844" />
+                                <point x="0.993197" y="0.496599" />
+                                <point x="0.897959" y="0.897959" />
+                                <point x="0.496599" y="1" />
+                                <point x="0.102041" y="0.897959" />
+                                <point x="0.00680272" y="0.496599" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503401" hotspotY="0.503401" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGParkinsonsGamerule" sid="827015533214156">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="796097318834773">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="557319122580712" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s กติกา\Details\Rules 1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\6002041620047\Project\Parkinson&apos;s กติกา\Details\Rules 2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="250870709326260">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="627112554309559">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Function" sid="793527721434492">
+            <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="Date" sid="343690495832882">
+            <plugin id="Rex_Date" />
+        </object-type>
+        <object-type name="AJAX" sid="673956650462999">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="SpriteFont" sid="966839296109069">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\ZENITSU\OneDrive\เดสก์ท็อป\Main030264_Update V3 Game 3 เปลี่ยน medicine\Textures\ScoreLevel1_Game3.png" />
+        </object-type>
+        <object-type name="Browser" sid="626172072930787">
+            <plugin id="Browser" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="Game1">
+            <layout>Parkinson&apos;s disease details .xml</layout>
+            <layout>Parkinson&apos;s disease Game rules.xml</layout>
+        </layout-folder>
+        <layout-folder name="Game2">
+            <layout>Game2_Level1.xml</layout>
+            <layout>Game2_Level2.xml</layout>
+            <layout>Game2_Level3.xml</layout>
+            <layout>Game2_Level4.xml</layout>
+            <layout>Game2_GameOver.xml</layout>
+        </layout-folder>
+        <layout-folder name="Game3">
+            <layout>Level1_Game3.xml</layout>
+            <layout>Level2_Game3.xml</layout>
+            <layout>Level3_Game3.xml</layout>
+            <layout>Level1_Game3_GameOver.xml</layout>
+            <layout>Level2_Game3_GameOver.xml</layout>
+            <layout>Level3_Game3_GameOver.xml</layout>
+            <layout>SaveTemplate.xml</layout>
+        </layout-folder>
+        <layout>SplashScreen.xml</layout>
+        <layout>SplashScreenWhite.xml</layout>
+        <layout>Login.xml</layout>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Game2">
+            <event-folder name="Event Main_Game2">
+                <event-sheet>Event Main_Game2.xml</event-sheet>
+            </event-folder>
+            <event-sheet>Event Game2_Level1.xml</event-sheet>
+            <event-sheet>Event Game2_GameOver.xml</event-sheet>
+            <event-sheet>Event Game2_Level2.xml</event-sheet>
+            <event-sheet>Event Game2_Level3.xml</event-sheet>
+            <event-sheet>Event Game2_Level4.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Game3">
+            <event-folder name="Event Main Game3">
+                <event-sheet>Event Main_Game3.xml</event-sheet>
+            </event-folder>
+            <event-sheet>Event Level1_Game3.xml</event-sheet>
+            <event-sheet>Event Level2_Game3.xml</event-sheet>
+            <event-sheet>Event Level3_Game3.xml</event-sheet>
+            <event-sheet>Event Level1_Game3_GameOver.xml</event-sheet>
+            <event-sheet>Event Level2_Game3_GameOver.xml</event-sheet>
+            <event-sheet>Event Level3_Game3_GameOver.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Game1">
+            <event-sheet>Event parkinson&apos;s disease details.xml</event-sheet>
+            <event-sheet>Event parkinson&apos;s disease Game Rules.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Event Sound">
+            <event-sheet>Event Sound.xml</event-sheet>
+        </event-folder>
+        <event-sheet>Event SplashScreen.xml</event-sheet>
+        <event-sheet>Event SplashScreenWhite.xml</event-sheet>
+        <event-sheet>Event Login.xml</event-sheet>
+        <event-sheet>Event Menu.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="16">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="65" />
+        <global-instance type="AJAX" uid="194" />
+        <global-instance type="Browser" uid="291" />
+    </global-instances>
+    <sounds-folder>
+        <sound-folder name="Game3">
+            <file name="match3.ogg" />
+            <file name="music.ogg" />
+            <file name="take.ogg" />
+            <file name="take2.ogg" />
+        </sound-folder>
+        <sound-folder name="Game2">
+            <file name="musicgame2.ogg" />
+            <file name="cardflip.ogg" />
+            <file name="matchtrue.ogg" />
+            <file name="fail.ogg" />
+            <file name="timeover.ogg" />
+            <file name="msgameover2.ogg" />
+            <file name="completegame2.ogg" />
+        </sound-folder>
+        <file name="SoundMainMenu.ogg" />
+        <file name="click.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

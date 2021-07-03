@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Game2_Level2</name>
+    <events>
+        <include>Event Main_Game2</include>
+        <event-block sid="802748036219164">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="275566905950180" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="106117903448616" type="Function">
+                    <param id="0" name="Name">&quot;musicgame2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="785636803296954" type="System">
+                    <param id="0" name="Variable">numend</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="133575728171049" type="System">
+                    <param id="0" name="Variable">game_id_game2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="191223543069363" type="System">
+                    <param id="0" name="Variable">level_id_game2</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="716030972843794" type="System">
+                    <param id="0" name="Variable">SecondRight</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="934616425492527" type="System">
+                    <param id="0" name="Variable">MinuteRight</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="474439239669695" type="SFMinuteRight">
+                    <param id="0" name="Text">MinuteRight</param>
+                </action>
+                <action id="0" name="Call function" sid="249565523602489" type="Function">
+                    <param id="0" name="Name">&quot;Setcards&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

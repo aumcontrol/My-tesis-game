@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Menu</name>
+    <events>
+        <variable constant="0" name="Rule" sid="658328121163956" static="0" type="number">2</variable>
+        <include>Event Sound</include>
+        <event-block sid="442927194350474">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="851154780505385" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-13" name="Set time scale" sid="553601085234523" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="0" name="Set text" sid="332801766922108" type="txtWelcome">
+                    <param id="0" name="Text">username</param>
+                </action>
+                <action id="-9" name="Set value" sid="272497733193649" type="System">
+                    <param id="0" name="Variable">CountTime</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Call function" sid="822527547921979" type="Function">
+                    <param id="0" name="Name">&quot;musicmenu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Request URL" sid="657976601666178" type="AJAX">
+                    <param id="0" name="Tag">&quot;getname&quot;</param>
+                    <param id="1" name="URL">&quot;https://ai-chulapd.com/game/getname.php?fid=&quot; &amp; UserID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="736381943610559">
+            <conditions>
+                <condition id="0" name="On completed" sid="205682851755565" type="AJAX">
+                    <param id="0" name="Tag">&quot;getname&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="139979246155367" type="txtWelcome">
+                    <param id="0" name="Text">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="153445627068490" title="Game1">
+            <sub-events>
+                <event-block sid="680994033615606">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="643576994179585" type="Touch">
+                            <param id="0" name="Object">btGame1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="711355574437695" type="btGame1">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="275581393588411" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="645974748126022" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="480444331769320" type="btGame1">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="796281442493183" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="142899094961616" type="System">
+                            <param id="0" name="Layout">Parkinson&apos;s disease details </param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="219061575262456" title="Game2">
+            <sub-events>
+                <event-block sid="325150937959936">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="447836027759076" type="Touch">
+                            <param id="0" name="Object">btgame2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="854884790706882" type="btgame2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="701423818651846" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="385992396694368" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="527259597269616" type="btgame2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="994591677416882" type="BGLevelGame2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="427452889035951" type="BGBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="152489313435698" type="btExitLevelGame2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="701689729896323" type="Level1_Game2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="240577153365816" type="Level2_Game2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="986637299492917" type="Level3_Game2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="369915220349414" type="Level4_Game2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="573334668488725" type="btGameRule2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="347358709837244" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="562386438284103">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="440698540578678" type="Touch">
+                            <param id="0" name="Object">Level1_Game2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="799569011115549" type="Level1_Game2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="713585785843646" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="615405923500074" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="668201448506057" type="Level1_Game2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="195650787064238" type="System">
+                            <param id="0" name="Layout">Game2_Level1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="744210074841993">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="852795658990844" type="Touch">
+                            <param id="0" name="Object">Level2_Game2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="159919984801742" type="Level2_Game2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="351734218117801" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="855019633677751" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="627845287244522" type="Level2_Game2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="220436107668836" type="System">
+                            <param id="0" name="Layout">Game2_Level2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944910961775619">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="532708945805627" type="Touch">
+                            <param id="0" name="Object">Level3_Game2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="862207140455183" type="Level3_Game2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="752412540388660" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="904417990824075" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="954239454573704" type="Level3_Game2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="247465004676821" type="System">
+                            <param id="0" name="Layout">Game2_Level3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="782659702224078">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="891926281712407" type="Touch">
+                            <param id="0" name="Object">Level4_Game2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="944749896270673" type="Level4_Game2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="107629882399771" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="691385879302338" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="792920720453710" type="Level4_Game2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="232054256688755" type="System">
+                            <param id="0" name="Layout">Game2_Level4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="283367223819401">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="929333237059084" type="Touch">
+                            <param id="0" name="Object">btGameRule2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="994054607070426" type="btGameRule2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="896008128522660" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="370292487885534" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="612267398308800" type="btGameRule2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="683174624122107" type="System">
+                            <param id="0" name="Variable">Rule</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="430307948619034" type="System">
+                            <param id="0" name="Layout">Parkinson&apos;s disease Game rules</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="128129506809515">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="239493393661865" type="Touch">
+                            <param id="0" name="Object">btExitLevelGame2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="858444973573300" type="btExitLevelGame2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="885530472742219" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="799389151334236" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="366216101632914" type="btExitLevelGame2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="523041521225755" type="BGLevelGame2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="936874375037145" type="BGBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="301824496820231" type="btExitLevelGame2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="426034807104870" type="Level1_Game2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="383115358751880" type="Level2_Game2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="316082510794957" type="Level3_Game2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="797358983349805" type="Level4_Game2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="155140731881608" type="btGameRule2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="700550415381691" type="System">
+                            <param id="0" name="Variable">Rule</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="530712491489019" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="954091711932338" title="Game3">
+            <sub-events>
+                <event-block sid="196095350731111">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="711353965888204" type="Touch">
+                            <param id="0" name="Object">btGame3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="813200518824984" type="btGame3">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="341552797326834" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="323165448899913" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="609565654925694" type="btGame3">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="914782223691762" type="BGLevelGame2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="265151444557822" type="BGBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="859275012678678" type="btExitLevelGame2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="454299185611019" type="Level1_Game3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="866376159990177" type="Level2_Game3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="171353323660382" type="Level3_Game3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="356795758254240" type="btGameRule3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="762150796228230" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="974817003423291">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="719923846443653" type="Touch">
+                            <param id="0" name="Object">Level1_Game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="528353894283060" type="Level1_Game3">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="264501365893148" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="950251589410346" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="965415667276477" type="Level1_Game3">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="257750765134342" type="System">
+                            <param id="0" name="Layout">Level1_Game3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456321390507453">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="676240767581905" type="Touch">
+                            <param id="0" name="Object">Level2_Game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="101283266440185" type="Level2_Game3">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="113218052184776" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="520713164056446" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="934445722124931" type="Level2_Game3">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="392955036812297" type="System">
+                            <param id="0" name="Layout">Level2_Game3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="351462593902541">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="628990958356358" type="Touch">
+                            <param id="0" name="Object">Level3_Game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="869816883981730" type="Level3_Game3">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="801973968677550" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="954354697833486" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="485132714793820" type="Level3_Game3">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="211812193967956" type="System">
+                            <param id="0" name="Layout">Level3_Game3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="606361320417697">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="530678391351127" type="Touch">
+                            <param id="0" name="Object">btGameRule3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="543760250050832" type="btGameRule3">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="756231812522175" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="747046244380833" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="103792664336620" type="btGameRule3">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="337600277916985" type="System">
+                            <param id="0" name="Variable">Rule</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="805387201080604" type="System">
+                            <param id="0" name="Layout">Parkinson&apos;s disease Game rules</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="207231005611884">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="140863157693745" type="Touch">
+                            <param id="0" name="Object">btExitLevelGame2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="983214110487990" type="btExitLevelGame2">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="562298374532121" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="170105715541924" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="662015659935842" type="btExitLevelGame2">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="220061317184343" type="BGLevelGame2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="792170231250202" type="BGBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="452779910853873" type="btExitLevelGame2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="532267695697269" type="Level1_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="934907909836712" type="Level2_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="646082435742339" type="Level3_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="675590873302318" type="btGameRule3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="858564357954871" type="System">
+                            <param id="0" name="Variable">Rule</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="359086353457630" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="785665316402637" title="Control">
+            <sub-events>
+                <comment>Sound</comment>
+                <event-block sid="249349696683539">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="603892395040761" type="Touch">
+                            <param id="0" name="Object">SoundMenu</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="738194813948598" type="SoundMenu">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="251929666423237" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="288723491115732" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="613862621486058" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="382410431748142" type="SoundMenu">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245842043260949">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="399333287113572" type="Touch">
+                            <param id="0" name="Object">SoundMenu</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="917703865566801" type="SoundMenu">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="862942917475837" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="496370841283520" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="327508186767423" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="371134986370409" type="SoundMenu">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948943273650835">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="251966184443165" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="295339901230776" type="SoundMenu">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531189090104838">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="368936842607795" type="Touch">
+                            <param id="0" name="Object">btLogout</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="221710925343229" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="831132701469429" type="btLogout">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="386988936205662" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="368020574390004" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="113617316890426" type="btLogout">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="768965402245841" type="System" />
+                        <action id="-2" name="Go to layout" sid="922004937159946" type="System">
+                            <param id="0" name="Layout">Login</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

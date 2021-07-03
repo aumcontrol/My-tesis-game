@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">SplashScreen</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/SplashScreen/" />
+        <folder expanded="0" path="object-folder/Login/" />
+        <folder expanded="0" path="object-folder/Menu/" />
+        <folder expanded="0" path="object-folder/Menu/LevelGame2/" />
+        <folder expanded="0" path="object-folder/Menu/LevelGame3/" />
+        <folder expanded="0" path="object-folder/UI_Game3/" />
+        <folder expanded="0" path="object-folder/UI_Game3/Game/" />
+        <folder expanded="0" path="object-folder/UI_Game3/Game Over/" />
+        <folder expanded="0" path="object-folder/UI_Game3/Menu/" />
+        <folder expanded="0" path="object-folder/UI_game2/" />
+        <folder expanded="0" path="object-folder/UI_game2/Game2/" />
+        <folder expanded="0" path="object-folder/UI_game2/GameOver2/" />
+        <folder expanded="1" path="object-folder/UI_game2/New folder/" />
+        <folder expanded="0" path="object-folder/UI_Parkinson&apos;s Details/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/Game1/" />
+        <folder expanded="0" path="layout-folder/Game2/" />
+        <folder expanded="0" path="layout-folder/Game3/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Game2/" />
+        <folder expanded="0" path="event-folder/Game2/Event Main_Game2/" />
+        <folder expanded="0" path="event-folder/Game3/" />
+        <folder expanded="0" path="event-folder/Game3/Event Main Game3/" />
+        <folder expanded="0" path="event-folder/Game1/" />
+        <folder expanded="0" path="event-folder/Event Sound/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="0" path="sound-folder/Game3/" />
+        <folder expanded="0" path="sound-folder/Game2/" />
+        <folder expanded="1" path="animation-folder/BGSplashScreen/" />
+        <folder expanded="1" path="animation-folder/BGLogin/" />
+        <folder expanded="1" path="animation-folder/BGtxtLogin/" />
+        <folder expanded="1" path="animation-folder/btnLogin/" />
+        <folder expanded="1" path="animation-folder/CircleLogin/" />
+        <folder expanded="1" path="animation-folder/Tulip/" />
+        <folder expanded="1" path="animation-folder/ai_chula/" />
+        <folder expanded="1" path="animation-folder/BGLevelGame2/" />
+        <folder expanded="1" path="animation-folder/btExitLevelGame2/" />
+        <folder expanded="1" path="animation-folder/Level1_Game2/" />
+        <folder expanded="1" path="animation-folder/Level2_Game2/" />
+        <folder expanded="1" path="animation-folder/Level3_Game2/" />
+        <folder expanded="1" path="animation-folder/BGBlack/" />
+        <folder expanded="1" path="animation-folder/Level4_Game2/" />
+        <folder expanded="1" path="animation-folder/Level1_Game3/" />
+        <folder expanded="1" path="animation-folder/Level2_Game3/" />
+        <folder expanded="1" path="animation-folder/Level3_Game3/" />
+        <folder expanded="1" path="animation-folder/BGMenu1/" />
+        <folder expanded="1" path="animation-folder/BGMenu/" />
+        <folder expanded="1" path="animation-folder/BGWelcome/" />
+        <folder expanded="1" path="animation-folder/btGame1/" />
+        <folder expanded="1" path="animation-folder/btgame2/" />
+        <folder expanded="1" path="animation-folder/btGame3/" />
+        <folder expanded="1" path="animation-folder/SoundMenu/" />
+        <folder expanded="1" path="animation-folder/btLogout/" />
+        <folder expanded="1" path="animation-folder/btGameRule2/" />
+        <folder expanded="1" path="animation-folder/btGameRule3/" />
+        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/BGBackgroundGame3/" />
+        <folder expanded="1" path="animation-folder/Elements/" />
+        <folder expanded="1" path="animation-folder/Line/" />
+        <folder expanded="1" path="animation-folder/ProgressSlodeBar/" />
+        <folder expanded="1" path="animation-folder/ProgressBack/" />
+        <folder expanded="1" path="animation-folder/ProgressBar/" />
+        <folder expanded="1" path="animation-folder/WallTest/" />
+        <folder expanded="1" path="animation-folder/BGGameOverBlack/" />
+        <folder expanded="1" path="animation-folder/BGGameOver/" />
+        <folder expanded="1" path="animation-folder/btGameOverHome/" />
+        <folder expanded="1" path="animation-folder/BGGameOverLevel1_Game3/" />
+        <folder expanded="1" path="animation-folder/BGMenuLevel1_Game3/" />
+        <folder expanded="1" path="animation-folder/btMenuResume/" />
+        <folder expanded="1" path="animation-folder/btMenuStop/" />
+        <folder expanded="1" path="animation-folder/btMenuHome/" />
+        <folder expanded="1" path="animation-folder/btMenuClose/" />
+        <folder expanded="1" path="animation-folder/BGMenuBlack/" />
+        <folder expanded="1" path="animation-folder/btMenuSound/" />
+        <folder expanded="1" path="animation-folder/btMenuGame/" />
+        <folder expanded="1" path="animation-folder/Card/" />
+        <folder expanded="1" path="animation-folder/Cardpos/" />
+        <folder expanded="1" path="animation-folder/Tulip4/" />
+        <folder expanded="1" path="animation-folder/BGGame2/" />
+        <folder expanded="1" path="animation-folder/BG_GameOver/" />
+        <folder expanded="1" path="animation-folder/Circle_GameOver/" />
+        <folder expanded="1" path="animation-folder/BGParkinsonsDetail/" />
+        <folder expanded="1" path="animation-folder/Back/" />
+        <folder expanded="1" path="animation-folder/Next/" />
+        <folder expanded="1" path="animation-folder/BTBackMenu/" />
+        <folder expanded="1" path="animation-folder/SoundDetails/" />
+        <folder expanded="1" path="animation-folder/BGParkinsonsGamerule/" />
+    </folders-expanded>
+</c2uistate>

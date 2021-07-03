@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Level3_Game3</name>
+    <events>
+        <include>Event Main_Game3</include>
+        <variable constant="0" name="game_id_level3_game3" sid="284603963702603" static="0" type="number">2</variable>
+        <variable constant="0" name="level_id_level3_game3" sid="846170951308882" static="0" type="number">3</variable>
+        <event-block sid="610928585512787">
+            <conditions>
+                <condition id="-11" name="For Each" sid="693086058914110" type="System">
+                    <param id="0" name="Object">Elements</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="978361174304875" type="Elements">
+                    <param id="0" name="Animation">&quot;F3&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="Second_Level3_Game3" sid="978774030658608" static="0" type="number">0</variable>
+        <variable constant="0" name="RealTime_Level3_Game3" sid="875318880286659" static="0" type="number">0</variable>
+        <variable constant="0" name="Minutes_Level3_Game3" sid="645494409635189" static="0" type="number">0</variable>
+        <event-group description="" sid="160688580531052" title="ButtonMenu4">
+            <sub-events>
+                <event-block sid="604145052011161">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="735489008861325" type="Touch">
+                            <param id="0" name="Object">btMenuHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="976702434024273" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="127818179431133" type="btMenuHome">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Play" sid="150344415626498" type="Audio">
+                            <param id="0" name="Audio file">click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="832076103677808" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="614476872911054" type="btMenuHome">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="160155854289414" type="System">
+                            <param id="0" name="Variable">EndTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="100702579140273" type="System">
+                            <param id="0" name="Variable">RealTime_Level3_Game3</param>
+                            <param id="1" name="Value">round(EndTime-StartTime)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="430694141890634" type="System">
+                            <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                            <param id="1" name="Value">floor(RealTime_Level3_Game3/60)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="813761768373253" type="System">
+                            <param id="0" name="Variable">Second_Level3_Game3</param>
+                            <param id="1" name="Value">RealTime_Level3_Game3%60</param>
+                        </action>
+                        <action id="2" name="Post to URL" sid="405076512085328" type="AJAX">
+                            <param id="0" name="Tag">&quot;insertscore_game3_level3&quot;</param>
+                            <param id="1" name="URL">&quot;https://ai-chulapd.com/game/insert_game3.php?hn_id=&quot;&amp;username&amp;&quot;&amp;score=&quot;&amp;Score_Game3&amp;&quot;&amp;time=&quot;&amp;RealTime_Level3_Game3&amp;&quot;&amp;game_id=&quot;&amp;game_id_level3_game3&amp;&quot;&amp;level_id=&quot;&amp;level_id_level3_game3&amp;&quot;&amp;status_game3=&quot;&amp;&quot;Return&quot;</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;GET&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446423728789115" type="System">
+                            <param id="0" name="Variable">Score_Game3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="487549997847653" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="294482038272679" type="System">
+                            <param id="0" name="Variable">SecondLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="523967795734583" type="System">
+                            <param id="0" name="Variable">MinuteLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="155329238675246" type="System">
+                            <param id="0" name="Variable">MinuteRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="124624564699223" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614783974616673">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="788755857304025" type="Touch">
+                            <param id="0" name="Object">btMenuStop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="622942971745465" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="660258741637491" type="btMenuStop">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="846123194814578" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="833557603629488" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="175591134206075" type="btMenuStop">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="111905980445693" type="BGMenuBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="763428799389724" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="527370056346745" type="btMenuClose">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="766262843615225" type="btMenuHome">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="865331877755096" type="btMenuResume">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="334838346427637" type="btMenuSound">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="770948657373623" type="btMenuStop">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="846132297498362" type="System">
+                            <param id="0" name="Variable">EndTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="693887504690907" type="System">
+                            <param id="0" name="Variable">RealTime_Level3_Game3</param>
+                            <param id="1" name="Value">round(EndTime-StartTime)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="230555414873268" type="System">
+                            <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                            <param id="1" name="Value">floor(RealTime_Level3_Game3/60)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="665567670517620" type="System">
+                            <param id="0" name="Variable">Second_Level3_Game3</param>
+                            <param id="1" name="Value">RealTime_Level3_Game3%60</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="999814909569012" type="BGGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="598234857283754" type="BGGameOverBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="836662641376000" type="btGameOverHome">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="910467447883575" type="SFScoreGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="287917820317172" type="SFTimeGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="396276679853752" type="SFTimeGameOver">
+                            <param id="0" name="Text">&quot;time &quot; &amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;Second_Level3_Game3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="499533293544415" type="SFScoreGameOver">
+                            <param id="0" name="Text">&quot;score : &quot; &amp; Score_Game3</param>
+                        </action>
+                        <action id="2" name="Post to URL" sid="701018501501350" type="AJAX">
+                            <param id="0" name="Tag">&quot;insertscore_game3_level3&quot;</param>
+                            <param id="1" name="URL">&quot;https://ai-chulapd.com/game/insert_game3.php?hn_id=&quot;&amp;username&amp;&quot;&amp;score=&quot;&amp;Score_Game3&amp;&quot;&amp;time=&quot;&amp;RealTime_Level3_Game3&amp;&quot;&amp;game_id=&quot;&amp;game_id_level3_game3&amp;&quot;&amp;level_id=&quot;&amp;level_id_level3_game3&amp;&quot;&amp;status_game3=&quot;&amp;&quot;Stop&quot;</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;GET&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="877373196828649" type="Function">
+                            <param id="0" name="Name">&quot;musicgameover2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="265226365224093" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="509186957502472" type="System">
+                            <param id="0" name="Variable">SecondLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="722650219902788" type="System">
+                            <param id="0" name="Variable">MinuteLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="677080603632992" type="System">
+                            <param id="0" name="Variable">MinuteRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="553938836291106" type="SFSecondRight">
+                            <param id="0" name="Text">SecondRight</param>
+                        </action>
+                        <action id="0" name="Set text" sid="803271032000697" type="SFSecondLeft">
+                            <param id="0" name="Text">SecondLeft</param>
+                        </action>
+                        <action id="0" name="Set text" sid="396055957321483" type="SFMinuteRight">
+                            <param id="0" name="Text">MinuteRight</param>
+                        </action>
+                        <action id="0" name="Set text" sid="715146633818793" type="SFMinuteLeft">
+                            <param id="0" name="Text">MinuteLeft</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="561351366462459">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="908500225562517" type="System">
+                                    <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="272595568529067" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot; &amp;&quot;0&quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;Second_Level3_Game3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742544065895567">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="755714285502606" type="System">
+                                    <param id="0" name="Variable">Second_Level3_Game3</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="823134353024600" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second_Level3_Game3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="654770854891622">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="896976056220949" type="System">
+                                    <param id="0" name="Variable">Second_Level3_Game3</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="384536730229091" type="System">
+                                    <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="474655075853469" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot;&amp;&quot;0&quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second_Level3_Game3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="PointsNeed3" sid="719728646500321" static="0" type="number">500</variable>
+        <variable constant="0" name="PointsNow3" sid="100844598095212" static="0" type="number">0</variable>
+        <event-group description="" sid="676606636430939" title="LEVELS LOGIC3">
+            <sub-events>
+                <comment>1000</comment>
+                <event-block sid="477955384798572">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="928689436066423" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="920704873098778" type="System">
+                            <param id="0" name="Variable">PointsNow3</param>
+                            <param id="1" name="Value">Score_Game3</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="153220023879875" type="ProgressSlodeBar">
+                            <param id="0" name="X">820 + (844 * (PointsNow3/PointsNeed3))</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="845588783282740" type="ProgressBack">
+                            <param id="0" name="Width">1 + (800 * (PointsNow3/PointsNeed3))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="697567991040905">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="839863917687325" type="System">
+                            <param id="0" name="Variable">PointsNow3</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">PointsNeed3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" disabled="1" id="10" name="Start" sid="463715991403210" type="BGGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" disabled="1" id="10" name="Start" sid="305310892483412" type="BGGameOverBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" disabled="1" id="10" name="Start" sid="443066157658373" type="btGameOverHome">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" disabled="1" id="10" name="Start" sid="427858885316121" type="SFScoreGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" disabled="1" id="10" name="Start" sid="766093184627273" type="SFTimeGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="314555086828226" type="SFScoreGameOver">
+                            <param id="0" name="Text">&quot;score : &quot; &amp; Score_Game3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="679297915782387" type="System">
+                            <param id="0" name="Variable">EndTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="300371794306469" type="System">
+                            <param id="0" name="Variable">RealTime_Level3_Game3</param>
+                            <param id="1" name="Value">round(EndTime-StartTime)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="691226415249484" type="System">
+                            <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                            <param id="1" name="Value">floor(RealTime_Level3_Game3/60)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="267927503149502" type="System">
+                            <param id="0" name="Variable">Second_Level3_Game3</param>
+                            <param id="1" name="Value">RealTime_Level3_Game3%60</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="502855070993729" type="System">
+                            <param id="0" name="Layout">Level3_Game3_GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="343016489475392" title="SCORE3">
+            <sub-events>
+                <event-block sid="252093443540703">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="421820605327742" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="227502395695668" type="ScoreLevel3_Game3">
+                            <param id="0" name="Text">Score_Game3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

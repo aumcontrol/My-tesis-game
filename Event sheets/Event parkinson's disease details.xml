@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event parkinson&apos;s disease details</name>
+    <events>
+        <include>Event Sound</include>
+        <variable constant="0" name="CountBack" sid="325990474042214" static="0" type="number">0</variable>
+        <variable constant="0" name="CountNext" sid="556571850351347" static="0" type="number">0</variable>
+        <variable constant="0" name="PNext" sid="636667188302222" static="0" type="number">0</variable>
+        <event-block sid="838907901970183">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="102435645484770" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="511395023988086" type="Function">
+                    <param id="0" name="Name">&quot;musicgameover2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="441309228571665" type="System">
+                    <param id="0" name="Variable">PNext</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="378623783370316" title="BUTTON_DETAILS">
+            <sub-events>
+                <event-block sid="981375698339704">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="421236382584893" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="663133150801798" type="Next">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="528426186638730" type="System">
+                            <param id="0" name="Variable">CountNext</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="954852290995902">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="355576255635651" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="575437801256092" type="Back">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="277970456504213" type="System">
+                            <param id="0" name="Variable">CountBack</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564784966453553">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="138681747618469" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="564658350552359" type="Back">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="678543885737199" type="System">
+                            <param id="0" name="Variable">CountBack</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665349135602468">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="870091087732897" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="873842780666524" type="Next">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="979556549200742" type="System">
+                            <param id="0" name="Variable">CountNext</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="866407745529860">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="856918477008241" type="Touch">
+                            <param id="0" name="Object">Next</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="603777338866456" type="System">
+                            <param id="0" name="Variable">CountNext</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="532481427970415" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="555292225918911">
+                            <conditions />
+                            <actions>
+                                <action id="9" name="Set scale" sid="795656196945241" type="Next">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="0" name="Call function" sid="641196338882087" type="Function">
+                                    <param id="0" name="Name">&quot;click&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="910584769739589" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="558232391410078" type="Next">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="289868539180308" type="BGParkinsonsDetail">
+                                    <param id="0" name="Frame number">PNext</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="648844327455958" type="BGParkinsonsDetail" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="508513427639921">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="512595414536178" type="Touch">
+                            <param id="0" name="Object">Back</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="130085768109878" type="System">
+                            <param id="0" name="Variable">CountBack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="195107584478220" type="System">
+                            <param id="0" name="Variable">PNext</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="235746014463714">
+                            <conditions />
+                            <actions>
+                                <action id="9" name="Set scale" sid="516308879634425" type="Back">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="0" name="Call function" sid="932757033034731" type="Function">
+                                    <param id="0" name="Name">&quot;click&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="810033287837527" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="826829167053263" type="Back">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="244654063491721" type="BGParkinsonsDetail">
+                                    <param id="0" name="Frame number">PNext</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="576996571176983" type="BGParkinsonsDetail" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="720031103101606">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="386765534835161" type="Touch">
+                            <param id="0" name="Object">BTBackMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="812215761046307" type="BTBackMenu">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="806798475098491" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="477201385516312" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="226672692611842" type="BTBackMenu">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="897397765281496" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="839804615251383" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="401746297158643" title="BUTTONSOUNDS">
+                    <sub-events>
+                        <event-block sid="504246219175890">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="912259480232647" type="Touch">
+                                    <param id="0" name="Object">SoundDetails</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="926840290253381" type="SoundDetails">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="768754329443320" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="345841294849151" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="689003588752875" type="SoundDetails">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="531832881826997">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="906928886728640" type="Touch">
+                                    <param id="0" name="Object">SoundDetails</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="844103030869552" type="SoundDetails">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="903647143876657" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="446342111148628" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="195236969768924" type="SoundDetails">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="659778227005896">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="840316212776069" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="115745738246390" type="SoundDetails">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Level3_Game3_GameOver</name>
+    <events>
+        <include>Event Main_Game3</include>
+        <event-block sid="697863756590289">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="301970085274776" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="10" name="Start" sid="388982493168312" type="BGGameOver">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="823023897121591" type="BGGameOverBlack">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="517722208930015" type="btGameOverHome">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="608272341674193" type="SFScoreGameOver">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="799180433018902" type="SFTimeGameOver">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="0" name="Set text" sid="832149825424159" type="SFScoreGameOver">
+                    <param id="0" name="Text">&quot;score : &quot; &amp; Score_Game3</param>
+                </action>
+                <action id="0" name="Set text" sid="539329461509114" type="SFTimeGameOver">
+                    <param id="0" name="Text">&quot;time &quot; &amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;Second_Level3_Game3</param>
+                </action>
+                <action id="2" name="Post to URL" sid="110784642067739" type="AJAX">
+                    <param id="0" name="Tag">&quot;insertscore_game3_level3&quot;</param>
+                    <param id="1" name="URL">&quot;https://ai-chulapd.com/game/insert_game3.php?hn_id=&quot;&amp;username&amp;&quot;&amp;score=&quot;&amp;Score_Game3&amp;&quot;&amp;time=&quot;&amp;RealTime_Level3_Game3&amp;&quot;&amp;game_id=&quot;&amp;game_id_level3_game3&amp;&quot;&amp;level_id=&quot;&amp;level_id_level3_game3&amp;&quot;&amp;status_game3=&quot;&amp;&quot;Success&quot;</param>
+                    <param id="2" name="Data">&quot;&quot;</param>
+                    <param id="3" name="Method">&quot;GET&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="751711374684260" type="Function">
+                    <param id="0" name="Name">&quot;musicgameover2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="121109160071437">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="137114883546152" type="System">
+                    <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="549061047043913" type="SFTimeGameOver">
+                    <param id="0" name="Text">&quot;time &quot; &amp;&quot;0&quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;Second_Level3_Game3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="700047296579855">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="806280346968279" type="System">
+                    <param id="0" name="Variable">Second_Level3_Game3</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="422088416859686" type="SFTimeGameOver">
+                    <param id="0" name="Text">&quot;time &quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second_Level3_Game3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="853846070638481">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="124894058068272" type="System">
+                    <param id="0" name="Variable">Second_Level3_Game3</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="396374227659521" type="System">
+                    <param id="0" name="Variable">Minutes_Level3_Game3</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="596694627646215" type="SFTimeGameOver">
+                    <param id="0" name="Text">&quot;time &quot;&amp;&quot;0&quot;&amp;Minutes_Level3_Game3&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second_Level3_Game3</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

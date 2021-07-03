@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Login</name>
+    <events>
+        <include>Event Sound</include>
+        <variable constant="0" name="username" sid="184535271528940" static="0" type="text"></variable>
+        <variable constant="0" name="UserID" sid="166232844113372" static="0" type="number">0</variable>
+        <event-block sid="338053809845365">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="532317407860395" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set focused" sid="226814914779381" type="txtLogin" />
+                <action id="7" name="Set CSS style" sid="765763609965343" type="txtLogin">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;black&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="685287140067813" type="txtLogin">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;35px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="842086401954400" type="txtLogin">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="777877145452044" type="txtLogin">
+                    <param id="0" name="Property name">&quot;outline&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="332709410845638" type="txtLogin">
+                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                    <param id="1" name="Value">&quot;center&quot;</param>
+                </action>
+                <action id="33" name="Stop all" sid="427282394988481" type="Audio" />
+                <action id="-9" name="Set value" sid="751363745273496" type="System">
+                    <param id="0" name="Variable">CountTime</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="112054094609995">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="391482394273903" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="441936268262944" type="System">
+                    <param id="0" name="Variable">CountTime</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="160938384532741" type="System">
+                    <param id="0" name="Object to create">Tulip</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">random(750,1890)</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="344183509781483" type="Tulip">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="805282466910986" type="Tulip">
+                    <param id="0" name="Speed">choose(350,400)</param>
+                </action>
+                <action id="-16" name="Wait" sid="989010228382475" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Create object" sid="451826423808294" type="System">
+                    <param id="0" name="Object to create">Tulip</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">random(30,730)</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="164630176682707" type="Tulip">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="764971480596100" type="Tulip">
+                    <param id="0" name="Speed">choose(350,400)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="793176873704759">
+            <conditions>
+                <condition id="-18" name="On created" sid="728416500096793" type="Tulip" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="533131604183397" type="Tulip">
+                    <param id="0" name="Frame number">random(0,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="640096929630761">
+            <conditions>
+                <condition id="1" name="On text changed" sid="786152768504547" type="txtLogin" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="849698050782261" type="System">
+                    <param id="0" name="Variable">username</param>
+                    <param id="1" name="Value">txtLogin.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="682735900530793">
+            <conditions>
+                <condition id="17" name="On tap object" sid="933355736344949" type="Touch">
+                    <param id="0" name="Object">btnLogin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="339190974804817" type="btnLogin">
+                    <param id="0" name="Scale">0.9</param>
+                </action>
+                <action id="0" name="Call function" sid="830708395199451" type="Function">
+                    <param id="0" name="Name">&quot;click&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="538637025933027" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="409673473503841" type="btnLogin">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="0" name="Request URL" sid="115040002802664" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                    <param id="1" name="URL">&quot;https://ai-chulapd.com/game/login.php?patient_id=&quot;&amp;username</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702843185145530">
+            <conditions>
+                <condition id="3" name="On touched object" sid="699466955571596" type="Touch">
+                    <param id="0" name="Object">ai_chula</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="893411547529943" type="ai_chula">
+                    <param id="0" name="Scale">0.9</param>
+                </action>
+                <action id="0" name="Call function" sid="156396030392095" type="Function">
+                    <param id="0" name="Name">&quot;click&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="154030307978382" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="385967011586831" type="ai_chula">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="864351667386507" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="8" name="Open URL in new window" sid="232567581169187" type="Browser">
+                    <param id="0" name="URL">&quot;https://ai-chulapd.com/w/&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="819922765665075">
+            <conditions>
+                <condition id="3" name="On touched object" sid="166995691578393" type="Touch">
+                    <param id="0" name="Object">Text_aichula</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="166784229131059" type="Function">
+                    <param id="0" name="Name">&quot;click&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="354179258319918" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="8" name="Open URL in new window" sid="865303131234162" type="Browser">
+                    <param id="0" name="URL">&quot;https://ai-chulapd.com/w/&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528904708234604">
+            <conditions>
+                <condition id="0" name="On completed" sid="828314462513256" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="235909805855781" type="System">
+                    <param id="0" name="Variable">UserID</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="909273104834086">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="987819093692446" type="System">
+                            <param id="0" name="Variable">UserID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="198263570819580" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="703332184008698" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="580017526297519" type="ai_chula" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="249910972086123" type="BGLogin" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="675402582789089" type="BGtxtLogin" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="563851488608156" type="btnLogin" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="488240829250949" type="CircleLogin" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="126778546788009" type="Tulip" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="610458307877185" type="Text_aichula" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="977101975096799" type="txtLogin" />
+                        <action behavior="Fade" id="0" name="Restart fade" sid="135060525526938" type="txtInvalid" />
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="253588608072936" type="ai_chula">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="808268735870364" type="BGLogin">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="332998021710681" type="BGtxtLogin">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="146343390686945" type="btnLogin">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="731245032807832" type="CircleLogin">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="178637377768013" type="Tulip">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="362978444650670" type="Text_aichula">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="623847916969287" type="txtLogin">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="314642485435421" type="txtInvalid">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="668911643491502" type="ai_chula">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="551923558196857" type="BGLogin">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="526424504290806" type="BGtxtLogin">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="128234663221851" type="btnLogin">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="473630965281144" type="CircleLogin">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="861750096304539" type="Tulip">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="312905323452901" type="Text_aichula">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="580817921890393" type="txtLogin">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="882220439493108" type="txtInvalid">
+                            <param id="0" name="Fade-out time">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="380139097126423" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="574255821543102" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994794494514742">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="767769127906342" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="654887044339849" type="txtInvalid">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="567241190336079" type="txtInvalid">
+                            <param id="0" name="Text">&quot;Invalid Username&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

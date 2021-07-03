@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Sound</name>
+    <events>
+        <variable constant="0" name="sound" sid="540785694430668" static="0" type="number">0</variable>
+        <event-group description="" sid="699325941850095" title="SOUND(ON/OFF)">
+            <sub-events>
+                <event-block sid="872211548230720">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="833106846139950" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="244584780697368" type="Audio">
+                            <param id="0" name="Tag">&quot;musicmenu&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="945378240365242" type="Audio">
+                            <param id="0" name="Tag">&quot;click&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="134542167191607" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgame2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="102091393512332" type="Audio">
+                            <param id="0" name="Tag">&quot;cardflip&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="621732723830781" type="Audio">
+                            <param id="0" name="Tag">&quot;matchtrue&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="881373309648380" type="Audio">
+                            <param id="0" name="Tag">&quot;fail&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="257236158523951" type="Audio">
+                            <param id="0" name="Tag">&quot;timeover&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="184203128233189" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgameover2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="150066094476693" type="Audio">
+                            <param id="0" name="Tag">&quot;completegame2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="672999145096469" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgame3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="407852021377252" type="Audio">
+                            <param id="0" name="Tag">&quot;take&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="140569276956834" type="Audio">
+                            <param id="0" name="Tag">&quot;take2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="156455618109594" type="Audio">
+                            <param id="0" name="Tag">&quot;match3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="963036697441481">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="374291809510324" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="847240829467451" type="Audio">
+                            <param id="0" name="Tag">&quot;musicmenu&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="752438272927252" type="Audio">
+                            <param id="0" name="Tag">&quot;click&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="956101545014606" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgame2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="352207342806275" type="Audio">
+                            <param id="0" name="Tag">&quot;cardflip&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="159947172653268" type="Audio">
+                            <param id="0" name="Tag">&quot;matchtrue&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="709246628466577" type="Audio">
+                            <param id="0" name="Tag">&quot;fail&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="334597014806411" type="Audio">
+                            <param id="0" name="Tag">&quot;timeover&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="948228523957997" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgameover2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="971860359369253" type="Audio">
+                            <param id="0" name="Tag">&quot;completegame2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="434863670478388" type="Audio">
+                            <param id="0" name="Tag">&quot;musicgame3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="376707822287268" type="Audio">
+                            <param id="0" name="Tag">&quot;take&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="578427331541066" type="Audio">
+                            <param id="0" name="Tag">&quot;take2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="378153350895208" type="Audio">
+                            <param id="0" name="Tag">&quot;match3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="887616895956363" title="SOUND(MENU)">
+            <sub-events>
+                <event-block sid="857908705029741">
+                    <conditions>
+                        <condition id="0" name="On function" sid="286971478119904" type="Function">
+                            <param id="0" name="Name">&quot;musicmenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="515516159457602" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="275680625723106">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="511503302788267" type="Audio">
+                                    <param id="0" name="Tag">&quot;musicmenu&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="584934432668002" type="Audio">
+                                    <param id="0" name="Audio file">SoundMainMenu</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;musicmenu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="320145842888059">
+                    <conditions>
+                        <condition id="0" name="On function" sid="431791235052141" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="300936690657305" type="Audio">
+                            <param id="0" name="Audio file">click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-1</param>
+                            <param id="1" name="Tag (optional)">&quot;click&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="895049104443258" title="SOUNDGAME2">
+            <sub-events>
+                <event-block sid="878904336769628">
+                    <conditions>
+                        <condition id="0" name="On function" sid="671331964971198" type="Function">
+                            <param id="0" name="Name">&quot;musicgame2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="192869591156543" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="465795342318001">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="531710620620847" type="Audio">
+                                    <param id="0" name="Tag">&quot;musicgame2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="899735051978412" type="Audio">
+                                    <param id="0" name="Audio file">musicgame2</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;musicgame2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="477138076796947">
+                    <conditions>
+                        <condition id="0" name="On function" sid="826332784927840" type="Function">
+                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="655419789277324" type="Audio">
+                            <param id="0" name="Audio file">cardflip</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;cardflip&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995432842127659">
+                    <conditions>
+                        <condition id="0" name="On function" sid="129836583107186" type="Function">
+                            <param id="0" name="Name">&quot;matchtrue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="838970401978470" type="Audio">
+                            <param id="0" name="Audio file">matchtrue</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;matchtrue&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670749330891863">
+                    <conditions>
+                        <condition id="0" name="On function" sid="856391343825642" type="Function">
+                            <param id="0" name="Name">&quot;fail&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="673283068968913" type="Audio">
+                            <param id="0" name="Audio file">fail</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fail&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="656300306397079">
+                    <conditions>
+                        <condition id="0" name="On function" sid="953418963013854" type="Function">
+                            <param id="0" name="Name">&quot;timeover&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="839387472559039" type="Audio" />
+                        <action id="0" name="Play" sid="274881267979729" type="Audio">
+                            <param id="0" name="Audio file">timeover</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;timeover&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="593413898983032">
+                    <conditions>
+                        <condition id="0" name="On function" sid="677317637727903" type="Function">
+                            <param id="0" name="Name">&quot;musicgameover2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="225540499543593" type="Audio" />
+                        <action id="0" name="Play" sid="549562458175611" type="Audio">
+                            <param id="0" name="Audio file">msgameover2</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;musicgameover2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="849689825766324">
+                    <conditions>
+                        <condition id="0" name="On function" sid="213303063779740" type="Function">
+                            <param id="0" name="Name">&quot;completegame2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="118835838543219" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="838045983654581">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="909805931920170" type="Audio">
+                                    <param id="0" name="Tag">&quot;completegame2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="749154964457338" type="Audio">
+                                    <param id="0" name="Audio file">completegame2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;completegame2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="169377472640416" title="SOUNDGAME3">
+            <sub-events>
+                <event-block sid="534219762947127">
+                    <conditions>
+                        <condition id="0" name="On function" sid="257891530840945" type="Function">
+                            <param id="0" name="Name">&quot;musicgame3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="727670406534951" type="Audio" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="831833808302855">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="581499572710659" type="Audio">
+                                    <param id="0" name="Tag">&quot;musicgame3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="990469227339872" type="Audio">
+                                    <param id="0" name="Audio file">music</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;musicgame3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="723945873743927">
+                    <conditions>
+                        <condition id="0" name="On function" sid="970776994555917" type="Function">
+                            <param id="0" name="Name">&quot;take&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="909833698963903" type="Audio">
+                            <param id="0" name="Audio file">take</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;take&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="381601513111640">
+                    <conditions>
+                        <condition id="0" name="On function" sid="551864875202329" type="Function">
+                            <param id="0" name="Name">&quot;take2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="798076967660311" type="Audio">
+                            <param id="0" name="Audio file">take2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;take2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="133324265174955">
+                    <conditions>
+                        <condition id="0" name="On function" sid="720306405727359" type="Function">
+                            <param id="0" name="Name">&quot;match3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="711784937192600" type="Audio">
+                            <param id="0" name="Audio file">match3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;match3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

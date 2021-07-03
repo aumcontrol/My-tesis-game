@@ -1,0 +1,2100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Main_Game2</name>
+    <events>
+        <include>Event Sound</include>
+        <comment>เกมที่เล่น</comment>
+        <variable constant="0" name="numend" sid="382848069121539" static="0" type="number">0</variable>
+        <variable constant="0" name="game_id_game2" sid="629090207107039" static="0" type="number">0</variable>
+        <variable constant="0" name="level_id_game2" sid="181764424027724" static="0" type="number">0</variable>
+        <comment>การจับคู่ภาพ</comment>
+        <variable constant="0" name="Opencardnumber" sid="759651553789793" static="0" type="number">0</variable>
+        <variable constant="0" name="Firstcard" sid="139335251693777" static="0" type="number">0</variable>
+        <variable constant="0" name="Lastcard" sid="261646298244942" static="0" type="number">0</variable>
+        <event-group description="" sid="293298255912412" title="MATCHIMAGE_GAME2">
+            <sub-events>
+                <event-block sid="774387745178989">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="916237983671225" type="Touch">
+                            <param id="0" name="Object">Card</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="118212329454285" type="Card">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="146553809420992" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="794862977923102" type="System">
+                            <param id="0" name="Variable">numend</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="851707772749602" type="Card">
+                            <param id="0" name="Animation">&quot;FC_LEVEL1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="293828671503713" type="Function">
+                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="124115059088360" type="Card">
+                            <param id="0" name="Frame number">Card.Mycard</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="181301684768917" type="System">
+                            <param id="0" name="Variable">Opencardnumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="165556255115818">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="202138692793390" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="825617372650602" type="System">
+                                    <param id="0" name="Variable">Firstcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106157296637504">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="841722021299039" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="955741925181860" type="System">
+                                    <param id="0" name="Variable">Lastcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="550011464850741">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="568559003389728" type="System">
+                                            <param id="0" name="Variable">Firstcard</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Lastcard</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="890351089303397" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="685161553832595">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="279725888374919" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="170842416479962" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="128731851946926">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="406597788778806" type="Touch">
+                            <param id="0" name="Object">Card</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="440160308338644" type="Card">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="921402003685463" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="135498976829506" type="System">
+                            <param id="0" name="Variable">numend</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="436051158464768" type="Card">
+                            <param id="0" name="Animation">&quot;FC_LEVEL2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="608888908305403" type="Function">
+                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="524722085354421" type="Card">
+                            <param id="0" name="Frame number">Card.Mycard</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="818331452078948" type="System">
+                            <param id="0" name="Variable">Opencardnumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="896871782861391">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="361465016818177" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="467662708744185" type="System">
+                                    <param id="0" name="Variable">Firstcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="523467731018095">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="417760155281091" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="652317620664540" type="System">
+                                    <param id="0" name="Variable">Lastcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="982423871694351">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="786495400714178" type="System">
+                                            <param id="0" name="Variable">Firstcard</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Lastcard</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="798071443504885" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="649412595793248">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="533230715651668" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="700542765499187" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="332155718694302">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="150067158483659" type="Touch">
+                            <param id="0" name="Object">Card</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="727212695557749" type="Card">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="919054060146351" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="732232824911900" type="System">
+                            <param id="0" name="Variable">numend</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="992709478695590" type="Card">
+                            <param id="0" name="Animation">&quot;FC_LEVEL3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="973274012179254" type="Function">
+                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="444158873019439" type="Card">
+                            <param id="0" name="Frame number">Card.Mycard</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="649223807378048" type="System">
+                            <param id="0" name="Variable">Opencardnumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="722490460819926">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="888422771531598" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="525110289187114" type="System">
+                                    <param id="0" name="Variable">Firstcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172170333150575">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="988888092213451" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="621428443641852" type="System">
+                                    <param id="0" name="Variable">Lastcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="959845906867649">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="110976315920627" type="System">
+                                            <param id="0" name="Variable">Firstcard</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Lastcard</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="962764130109607" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="927157747440565">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="369886648394428" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="255040691358952" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="889830671462375">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="737796630124960" type="Touch">
+                            <param id="0" name="Object">Card</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="526794233118080" type="Card">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="972686348857995" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="709309053143229" type="System">
+                            <param id="0" name="Variable">numend</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="191181093841336" type="Card">
+                            <param id="0" name="Animation">&quot;FC_LEVEL4&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="139512719323551" type="Function">
+                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="401332017024769" type="Card">
+                            <param id="0" name="Frame number">Card.Mycard</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="313347635187379" type="System">
+                            <param id="0" name="Variable">Opencardnumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="141421691528425">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="805734287792370" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="938379293484493" type="System">
+                                    <param id="0" name="Variable">Firstcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="370291185933316">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="941518923866128" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="935202620571181" type="System">
+                                    <param id="0" name="Variable">Lastcard</param>
+                                    <param id="1" name="Value">Card.AnimationFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="545182427212020">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="398621435769273" type="System">
+                                            <param id="0" name="Variable">Firstcard</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Lastcard</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="142851860712444" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="626841441370441">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="852821202394485" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="986900149043063" type="Function">
+                                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>นับคะแนนเล่น</comment>
+        <variable constant="0" name="ScoreFalse" sid="323892133687142" static="0" type="number">0</variable>
+        <variable constant="0" name="ScoreTrue" sid="713066763762606" static="0" type="number">0</variable>
+        <variable constant="0" name="Play" sid="119952801839097" static="0" type="number">0</variable>
+        <variable constant="0" name="MatchNumber" sid="714031664687391" static="0" type="number">0</variable>
+        <event-group description="" sid="909958019969669" title="FUNCTION_GAME2">
+            <sub-events>
+                <comment>ฟังค์ชั่นเริ่มเกม</comment>
+                <event-block sid="929791994340319">
+                    <conditions>
+                        <condition id="0" name="On function" sid="254938975198015" type="Function">
+                            <param id="0" name="Name">&quot;Setcards&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="442860734695413" type="System">
+                            <param id="0" name="Variable">ScoreTrue</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="317497419395713" type="System">
+                            <param id="0" name="Variable">ScoreFalse</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="109336867838794" type="Cardpos">
+                            <param id="0" name="Instance variable">used</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="935606117732293" type="System">
+                            <param id="0" name="Variable">MatchNumber</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="801693007930029">
+                            <conditions>
+                                <condition id="-10" name="For" sid="531813617300180" type="System">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">6</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="736782695690120" type="System">
+                                    <param id="0" name="Variable">numend</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="210163876573276" type="System">
+                                    <param id="0" name="Object to create">Card</param>
+                                    <param id="1" name="Layer">&quot;Card&quot;</param>
+                                    <param id="2" name="X">-156</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="978910926506884">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="583926193599353" type="System">
+                                            <param id="0" name="Name">&quot;Card&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Card.Count-1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="160025498464171" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.IID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="461494604632244">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="780812719397432" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Expression">Cardpos.used</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-16" name="Pick random instance" sid="410720917211986" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="409136869611479" type="Card">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="817101561564129" type="Card">
+                                                    <param id="0" name="Instance variable">Mycard</param>
+                                                    <param id="1" name="Value">loopindex%3</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="797280332250792" type="Cardpos">
+                                                    <param id="0" name="Instance variable">used</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="186402168571210">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="336102568553515" type="btMenuGame">
+                                                    <param id="0" name="X">-157</param>
+                                                    <param id="1" name="Y">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="533635233396014" type="Card">
+                                                    <param id="0" name="Animation">&quot;FC_LEVEL1&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="458471119778743" type="Card">
+                                                    <param id="0" name="Frame number">Card.Mycard</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="135112022075562" type="System">
+                                                    <param id="0" name="Seconds">3.0</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="280514088501492" type="btMenuGame">
+                                                    <param id="0" name="X">1842</param>
+                                                    <param id="1" name="Y">75</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="194826374204403" type="System">
+                                                    <param id="0" name="Variable">CountTime</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="511541556053756" type="System">
+                                                    <param id="0" name="Variable">StartTime</param>
+                                                    <param id="1" name="Value">time</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="304185053212636" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="728948473780454" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="222588059126143" type="System">
+                                                    <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="205233563865323" type="Card">
+                                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="473239580412282" type="Function">
+                                                    <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="375900747828519" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="156551585063814" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">155</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="392138459056176" type="System">
+                                                    <param id="0" name="Variable">Play</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="245317182103990">
+                            <conditions>
+                                <condition id="-10" name="For" sid="775021043844468" type="System">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="982713214848658" type="System">
+                                    <param id="0" name="Variable">numend</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="451269398359130" type="System">
+                                    <param id="0" name="Object to create">Card</param>
+                                    <param id="1" name="Layer">&quot;Card&quot;</param>
+                                    <param id="2" name="X">-156</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="837076584076354">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="474427296804166" type="System">
+                                            <param id="0" name="Name">&quot;Card&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Card.Count-1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="467591300090141" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.IID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="928298151434751">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="644889026190514" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Expression">Cardpos.used</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-16" name="Pick random instance" sid="581842110566763" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="760564666815991" type="Card">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="273355899177302" type="Card">
+                                                    <param id="0" name="Instance variable">Mycard</param>
+                                                    <param id="1" name="Value">loopindex%5</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="198813712672811" type="Cardpos">
+                                                    <param id="0" name="Instance variable">used</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="652017590064959">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="304209780459685" type="btMenuGame">
+                                                    <param id="0" name="X">-157</param>
+                                                    <param id="1" name="Y">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="616843294385596" type="Card">
+                                                    <param id="0" name="Animation">&quot;FC_LEVEL2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="127167088687880" type="Card">
+                                                    <param id="0" name="Frame number">Card.Mycard</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="175654851815805" type="System">
+                                                    <param id="0" name="Seconds">5</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="485223134209050" type="btMenuGame">
+                                                    <param id="0" name="X">1842</param>
+                                                    <param id="1" name="Y">75</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="300941910980133" type="System">
+                                                    <param id="0" name="Variable">CountTime</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="555243382221067" type="System">
+                                                    <param id="0" name="Variable">StartTime</param>
+                                                    <param id="1" name="Value">time</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="737226927833166" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="164349551547170" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="557666069692101" type="System">
+                                                    <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="659822696434882" type="Card">
+                                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="305360782491052" type="Function">
+                                                    <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="626731332068793" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="647047950697387" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">155</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="593733690312895" type="System">
+                                                    <param id="0" name="Variable">Play</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="488034808148388">
+                            <conditions>
+                                <condition id="-10" name="For" sid="570500205614479" type="System">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">16</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="657232938804169" type="System">
+                                    <param id="0" name="Variable">numend</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="757706129198304" type="System">
+                                    <param id="0" name="Object to create">Card</param>
+                                    <param id="1" name="Layer">&quot;Card&quot;</param>
+                                    <param id="2" name="X">-156</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="911896020596469">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="926862874365695" type="System">
+                                            <param id="0" name="Name">&quot;Card&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Card.Count-1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="651078320850475" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.IID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="207809160455950">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="203875820842073" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Expression">Cardpos.used</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-16" name="Pick random instance" sid="498534928024136" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="831278552956285" type="Card">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="882847446912303" type="Card">
+                                                    <param id="0" name="Instance variable">Mycard</param>
+                                                    <param id="1" name="Value">loopindex%8</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="274208256958189" type="Cardpos">
+                                                    <param id="0" name="Instance variable">used</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="157541642323351">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="212366641230550" type="btMenuGame">
+                                                    <param id="0" name="X">-157</param>
+                                                    <param id="1" name="Y">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="758603123116394" type="Card">
+                                                    <param id="0" name="Animation">&quot;FC_LEVEL3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="844654874264271" type="Card">
+                                                    <param id="0" name="Frame number">Card.Mycard</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="515177435830384" type="System">
+                                                    <param id="0" name="Seconds">8</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="766877952394606" type="btMenuGame">
+                                                    <param id="0" name="X">1842</param>
+                                                    <param id="1" name="Y">75</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="436192328020575" type="System">
+                                                    <param id="0" name="Variable">CountTime</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="509063500527528" type="System">
+                                                    <param id="0" name="Variable">StartTime</param>
+                                                    <param id="1" name="Value">time</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="356349995755827" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="963365859058624" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="811502770927553" type="System">
+                                                    <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="331144082284593" type="Card">
+                                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="821472716047951" type="Function">
+                                                    <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="420786160451703" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="833662279532242" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">155</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="762663643982521" type="System">
+                                                    <param id="0" name="Variable">Play</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="634446283404598">
+                            <conditions>
+                                <condition id="-10" name="For" sid="856903117924402" type="System">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">20</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="660713789395587" type="System">
+                                    <param id="0" name="Variable">numend</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="605991854388535" type="System">
+                                    <param id="0" name="Object to create">Card</param>
+                                    <param id="1" name="Layer">&quot;Card&quot;</param>
+                                    <param id="2" name="X">-156</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="815891952813402">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="106051619336325" type="System">
+                                            <param id="0" name="Name">&quot;Card&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Card.Count-1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="190564795775034" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.IID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">loopindex</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="912706416638970">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="960317308432407" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Expression">Cardpos.used</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-16" name="Pick random instance" sid="925105426447187" type="System">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="678486626969480" type="Card">
+                                                    <param id="0" name="Object">Cardpos</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="844886937531783" type="Card">
+                                                    <param id="0" name="Instance variable">Mycard</param>
+                                                    <param id="1" name="Value">loopindex%10</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="537995370675704" type="Cardpos">
+                                                    <param id="0" name="Instance variable">used</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="257241617366427">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="312417337262872" type="btMenuGame">
+                                                    <param id="0" name="X">-157</param>
+                                                    <param id="1" name="Y">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="642389891854520" type="Card">
+                                                    <param id="0" name="Animation">&quot;FC_LEVEL4&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="830724340008755" type="Card">
+                                                    <param id="0" name="Frame number">Card.Mycard</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="833403588792866" type="System">
+                                                    <param id="0" name="Seconds">10</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="371010502519843" type="btMenuGame">
+                                                    <param id="0" name="X">1842</param>
+                                                    <param id="1" name="Y">75</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="543988511915363" type="System">
+                                                    <param id="0" name="Variable">CountTime</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="383446148092715" type="System">
+                                                    <param id="0" name="Variable">StartTime</param>
+                                                    <param id="1" name="Value">time</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="843936249450965" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="329420428336098" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="684554205021463" type="System">
+                                                    <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="165846644077426" type="Card">
+                                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="607129530537718" type="Function">
+                                                    <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="516719999565753" type="Card">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="3" name="Set target" sid="130213470570133" type="Card">
+                                                    <param id="0" name="Target is">4</param>
+                                                    <param id="1" name="Relativity">0</param>
+                                                    <param id="2" name="Value">155</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="539303175947748" type="System">
+                                                    <param id="0" name="Variable">Play</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>ฟังค์ชั่นเช็คการจับคู่</comment>
+                <event-block sid="165316229195045">
+                    <conditions>
+                        <condition id="0" name="On function" sid="828804410753613" type="Function">
+                            <param id="0" name="Name">&quot;Checkmatch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="632729674858365" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="127595327862696">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="869833240667740" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;no&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="133832288275270" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="914553995232892" type="Function">
+                                    <param id="0" name="Name">&quot;fail&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="155857887004913" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="171772804068175" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="523723777291945" type="System">
+                                    <param id="0" name="Variable">Play</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="124489806951287" type="System">
+                                    <param id="0" name="Variable">ScoreFalse</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="106232807695108" type="SFScoreFalse">
+                                    <param id="0" name="Text">ScoreFalse</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="902391350933851">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="338387868339025" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="806479977178723" type="Card">
+                                            <param id="0" name="Animation">&quot;FC_LEVEL1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="763097990469082" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="369125970052291" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="866851504482634" type="System">
+                                            <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="385926677159264" type="Card">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="736531375735508" type="Function">
+                                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="904397463294575" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="473744460502885" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">155</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="748269551616671">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="680054201021234" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="494484739120073" type="Card">
+                                            <param id="0" name="Animation">&quot;FC_LEVEL2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="144216788073063" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="266162685203088" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="277364859785589" type="System">
+                                            <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="582905721231395" type="Card">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="758270475295399" type="Function">
+                                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="813939076487419" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="430827623979636" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">155</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="712680315231611">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="640525590568471" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="952181504899014" type="Card">
+                                            <param id="0" name="Animation">&quot;FC_LEVEL3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="910630412134316" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="160913679306100" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="648705792238653" type="System">
+                                            <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="587047693778696" type="Card">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="939171895734593" type="Function">
+                                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="247886481655814" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="516816384219088" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">155</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="305770975848880">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="984139814102131" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="458874482671132" type="Card">
+                                            <param id="0" name="Animation">&quot;FC_LEVEL4&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="640026113420138" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="839387755223630" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="140244067301949" type="System">
+                                            <param id="0" name="Seconds">Card.LiteTween.Duration</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="509540921611649" type="Card">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="950742815351210" type="Function">
+                                            <param id="0" name="Name">&quot;cardflip&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="972976906768795" type="Card">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="815301770164599" type="Card">
+                                            <param id="0" name="Target is">4</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">155</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="709380800868125">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="946448483519794" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;yes&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="774404305112142" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="0" name="Call function" sid="698997954539349" type="Function">
+                                    <param id="0" name="Name">&quot;matchtrue&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="871808455437066" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="363412374704058" type="System">
+                                    <param id="0" name="Variable">Opencardnumber</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="378502509111641" type="System">
+                                    <param id="0" name="Variable">Play</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="425108710430532" type="System">
+                                    <param id="0" name="Variable">ScoreTrue</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="899491132916716" type="SFScoreTrue">
+                                    <param id="0" name="Text">ScoreTrue</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="866677555916427" type="System">
+                                    <param id="0" name="Variable">MatchNumber</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="193016314018137">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="683526774727076" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.AnimationName</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">&quot;FC_LEVEL1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="177404967056259" type="Card" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="352319732901733">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="472751172712107" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.AnimationName</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">&quot;FC_LEVEL2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="966839362480520" type="Card" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="647575216832989">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="599356840845415" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.AnimationName</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">&quot;FC_LEVEL3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="583881914260489" type="Card" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="925229863639110">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="559714024008936" type="System">
+                                            <param id="0" name="Object">Card</param>
+                                            <param id="1" name="Expression">Card.AnimationName</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">&quot;FC_LEVEL4&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="325286225565421" type="Card" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="362445335203319">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="190833462041916" type="System">
+                                            <param id="0" name="Variable">MatchNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="561603049465347" type="System">
+                                            <param id="0" name="Variable">numend</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="100091308535916" type="Function">
+                                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="572039078779254" type="Function">
+                                            <param id="0" name="Name">&quot;completegame2&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="697476405600966" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="213185262070098" type="System">
+                                            <param id="0" name="Layout">Game2_GameOver</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="304271130893306">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="807851807367779" type="System">
+                                            <param id="0" name="Variable">MatchNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="626664869459640" type="System">
+                                            <param id="0" name="Variable">numend</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="765648401726089" type="Function">
+                                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="125873051848599" type="Function">
+                                            <param id="0" name="Name">&quot;completegame2&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="326455851891726" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="984291148299692" type="System">
+                                            <param id="0" name="Layout">Game2_GameOver</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="381806283091617">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="653166950174477" type="System">
+                                            <param id="0" name="Variable">MatchNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="578935660766611" type="System">
+                                            <param id="0" name="Variable">numend</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="109649694146582" type="Function">
+                                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="706618094439306" type="Function">
+                                            <param id="0" name="Name">&quot;completegame2&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="760870902269323" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="967006941706793" type="System">
+                                            <param id="0" name="Layout">Game2_GameOver</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="103020243637588">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="854227192617788" type="System">
+                                            <param id="0" name="Variable">MatchNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="866936884432778" type="System">
+                                            <param id="0" name="Variable">numend</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="251136170902831" type="Function">
+                                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="159186360199335" type="Function">
+                                            <param id="0" name="Name">&quot;completegame2&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="216468946296563" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="236070595629503" type="System">
+                                            <param id="0" name="Layout">Game2_GameOver</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>ฟังค์ชั่นจบเกม</comment>
+                <event-block sid="749480915010576">
+                    <conditions>
+                        <condition id="0" name="On function" sid="927977231068771" type="Function">
+                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="469070454619428" type="Function">
+                            <param id="0" name="Name">&quot;Settime&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="579669866054892" type="System">
+                            <param id="0" name="Variable">EndTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944280958592321" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="720648480745217" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="569416539913332" type="System">
+                            <param id="0" name="Variable">RealTime</param>
+                            <param id="1" name="Value">round(EndTime-StartTime)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="955290316147807" type="System">
+                            <param id="0" name="Variable">Minutes</param>
+                            <param id="1" name="Value">floor(RealTime/60)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="460093305366170" type="System">
+                            <param id="0" name="Variable">Second</param>
+                            <param id="1" name="Value">RealTime%60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>เอาหน้าต่าง Menu ออกไป</comment>
+                <event-block sid="740085042609180">
+                    <conditions>
+                        <condition id="0" name="On function" sid="113194451367682" type="Function">
+                            <param id="0" name="Name">&quot;ReverseLT&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="862123945898664" type="BGMenuBlack">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="562727945471554" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="381080803112836" type="btMenuClose">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="824827397457874" type="btMenuHome">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="941223503733807" type="btMenuResume">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="982416711695561" type="SoundMenu">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="283058482961359" type="btMenuStop">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>นำหน้าต่าง Menu เข้ามา</comment>
+                <event-block sid="311330159050963">
+                    <conditions>
+                        <condition id="0" name="On function" sid="160471322196910" type="Function">
+                            <param id="0" name="Name">&quot;StartLT&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="626370949464040" type="BGMenuBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="665087114106504" type="BGMenuLevel1_Game3">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="954792408533191" type="btMenuClose">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="147308358395818" type="btMenuHome">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="717813569532526" type="btMenuResume">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="868702090515633" type="SoundMenu">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="794304305833465" type="btMenuStop">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>เซตเวลาใหม่</comment>
+                <event-block sid="917818682457881">
+                    <conditions>
+                        <condition id="0" name="On function" sid="241871745268178" type="Function">
+                            <param id="0" name="Name">&quot;Settime&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="204414848277889" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="802170384429778" type="System">
+                            <param id="0" name="Variable">SecondLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="405948887598722" type="System">
+                            <param id="0" name="Variable">MinuteLeft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="624539360952064" type="System">
+                            <param id="0" name="Variable">MinuteRight</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="664038728733703" type="SFSecondRight">
+                            <param id="0" name="Text">&quot;0&quot;&amp;SecondRight</param>
+                        </action>
+                        <action id="0" name="Set text" sid="237275200457078" type="SFSecondLeft">
+                            <param id="0" name="Text">SecondLeft</param>
+                        </action>
+                        <action id="0" name="Set text" sid="879169975731356" type="SFMinuteRight">
+                            <param id="0" name="Text">MinuteRight</param>
+                        </action>
+                        <action id="0" name="Set text" sid="754075385118990" type="SFMinuteLeft">
+                            <param id="0" name="Text">MinuteLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="228794656549127" title="BUTTON_GAME2">
+            <sub-events>
+                <comment>Sound</comment>
+                <event-block sid="938576800143937">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="261298405978464" type="Touch">
+                            <param id="0" name="Object">SoundMenu</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="452391481455241" type="SoundMenu">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="496605335988129" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="872531494972250" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="948589834926796" type="SoundMenu">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="506426171416320">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="247129771013339" type="Touch">
+                            <param id="0" name="Object">SoundMenu</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="239566506256371" type="SoundMenu">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="772400570631537" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="868333096043255" type="SoundMenu">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="140434294437475">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="596462702651546" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="775313001389914" type="SoundMenu">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Menu</comment>
+                <event-block sid="841261063230258">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="307411371289597" type="Touch">
+                            <param id="0" name="Object">btMenuGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="339545421567795" type="btMenuGame">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="272599876823395" type="btMenuGame">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="286764874170459" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="338922105476514" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="583093609566655" type="btMenuGame">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="482131693170517" type="Function">
+                            <param id="0" name="Name">&quot;StartLT&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="427904076384568" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="191776290880068" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="710577625544240" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337473746097141">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="546296231594113" type="Touch">
+                            <param id="0" name="Object">btMenuClose</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="401486948002404" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="480359931028966" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="813571443686673" type="btMenuClose">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="178517221986024" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="846071586711339" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="616464949035749" type="btMenuClose">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="467086138694328" type="Function">
+                            <param id="0" name="Name">&quot;ReverseLT&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="564180142288148" type="btMenuGame">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="685829347801645">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="441515056638397" type="Touch">
+                            <param id="0" name="Object">btMenuHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="539928416904311" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="744528438618455" type="Function">
+                            <param id="0" name="Name">&quot;Settime&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="638810197101377" type="Function">
+                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="838364215270468" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="463879511779126" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="564224950482416" type="btMenuHome">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="969840387164053" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="982179230816496" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="146067915664853" type="btMenuHome">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="2" name="Post to URL" sid="738957141839753" type="AJAX">
+                            <param id="0" name="Tag">&quot;insert_game2_level1&quot;</param>
+                            <param id="1" name="URL">&quot;https://ai-chulapd.com/game/insert_game2.php?hn_id=&quot;&amp;username&amp;&quot;&amp;score_plus=&quot;&amp;ScoreTrue&amp;&quot;&amp;score_sub=&quot;&amp;ScoreFalse&amp;&quot;&amp;time=&quot;&amp;RealTime&amp;&quot;&amp;game_id=&quot;&amp;game_id_game2&amp;&quot;&amp;level_id=&quot;&amp;level_id_game2&amp;&quot;&amp;status_game2=&quot;&amp;&quot;Return&quot;</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;GET&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="671501212897001" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872514988862545">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="941629563200512" type="Touch">
+                            <param id="0" name="Object">btMenuResume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="885766353183313" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="465974717890961" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="874076069912364" type="btMenuResume">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="699906682605349" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="195554057889745" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="151748919286346" type="btMenuResume">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="386496249663710" type="Function">
+                            <param id="0" name="Name">&quot;ReverseLT&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="925082003846293" type="btMenuGame">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="821833161009474">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="189642801964048" type="Touch">
+                            <param id="0" name="Object">btMenuStop</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="606132735347973" type="Function">
+                            <param id="0" name="Name">&quot;Settime&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="789969542859300" type="Function">
+                            <param id="0" name="Name">&quot;Endgame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="256011494133372" type="Function">
+                            <param id="0" name="Name">&quot;musicgameover2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="791887902002569" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="542708099481593" type="System">
+                            <param id="0" name="Variable">Play</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="786453802644525" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="314135845551342" type="btMenuStop">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="402367270555640" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="509601379570429" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="866240250902710" type="btMenuStop">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="824086699109587" type="Function">
+                            <param id="0" name="Name">&quot;ReverseLT&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="751869922769915" type="BGGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="397109289337953" type="BGGameOverBlack">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="322438341711059" type="btGameOverHome">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="854975620564341" type="SFScoreTrue_GameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="657792519806938" type="SFScoreFalse_GameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="887761868008194" type="SFTimeGameOver">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="128746508287484" type="SFScoreFalse_GameOver">
+                            <param id="0" name="Text">&quot;score - : &quot; &amp; ScoreFalse</param>
+                        </action>
+                        <action id="0" name="Set text" sid="190119680245970" type="SFScoreTrue_GameOver">
+                            <param id="0" name="Text">&quot;score + : &quot; &amp; ScoreTrue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="612356276859545" type="SFTimeGameOver">
+                            <param id="0" name="Text">&quot;time &quot; &amp;Minutes&amp;&quot;:&quot;&amp;Second</param>
+                        </action>
+                        <action id="2" name="Post to URL" sid="397862686560404" type="AJAX">
+                            <param id="0" name="Tag">&quot;insert_game2_level1&quot;</param>
+                            <param id="1" name="URL">&quot;https://ai-chulapd.com/game/insert_game2.php?hn_id=&quot;&amp;username&amp;&quot;&amp;score_plus=&quot;&amp;ScoreTrue&amp;&quot;&amp;score_sub=&quot;&amp;ScoreFalse&amp;&quot;&amp;time=&quot;&amp;RealTime&amp;&quot;&amp;game_id=&quot;&amp;game_id_game2&amp;&quot;&amp;level_id=&quot;&amp;level_id_game2&amp;&quot;&amp;status_game2=&quot;&amp;&quot;Stop&quot;</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;GET&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="936768149545442">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="370762356098991" type="System">
+                                    <param id="0" name="Variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="851463748661593" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot; &amp;&quot;0&quot;&amp;Minutes&amp;&quot;:&quot;&amp;Second</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="394854380282955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="912203957211266" type="System">
+                                    <param id="0" name="Variable">Second</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="446437975012317" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot;&amp;Minutes&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="909646609183531">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="961839843260503" type="System">
+                                    <param id="0" name="Variable">Second</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="329242742628713" type="System">
+                                    <param id="0" name="Variable">Minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="796147469349294" type="SFTimeGameOver">
+                                    <param id="0" name="Text">&quot;time &quot;&amp;&quot;0&quot;&amp;Minutes&amp;&quot;:&quot;&amp;&quot;0&quot;&amp;Second</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>จับเวลา</comment>
+        <variable constant="0" name="RealTime" sid="374093331044712" static="0" type="number">0</variable>
+        <variable constant="0" name="CountTime" sid="616823604911264" static="0" type="number">0</variable>
+        <variable constant="0" name="Second" sid="432579956437087" static="0" type="number">0</variable>
+        <variable constant="0" name="Minutes" sid="892341744302209" static="0" type="number">0</variable>
+        <variable constant="0" name="SecondRight" sid="990073489718827" static="0" type="number">0</variable>
+        <variable constant="0" name="SecondLeft" sid="611184850490027" static="0" type="number">0</variable>
+        <variable constant="0" name="MinuteLeft" sid="256391069847198" static="0" type="number">0</variable>
+        <variable constant="0" name="MinuteRight" sid="725456325355804" static="0" type="number">0</variable>
+        <event-group description="" sid="351332071905732" title="TIME_GAME2">
+            <sub-events>
+                <event-block sid="216971103588207">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="630803600425417" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="528672222190944" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="106683348901182" type="System">
+                            <param id="0" name="Object to create">Tulip</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(30,1890)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="155597862753455" type="Tulip">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="784789627563522" type="Tulip">
+                            <param id="0" name="Speed">choose(200,250)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="987696114851763">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="978242914462674" type="Tulip" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="510367342738535" type="Tulip">
+                            <param id="0" name="Frame number">random(0,4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="188896368427213">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="403536119613567" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="569392437428177" type="System">
+                            <param id="0" name="Variable">CountTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="478765527374557" type="System">
+                            <param id="0" name="Variable">SecondLeft</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="479907991105098" type="System">
+                            <param id="0" name="Variable">SecondRight</param>
+                            <param id="1" name="Value">round(SecondRight-SecondLeft)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="834164786418328" type="SFSecondRight">
+                            <param id="0" name="Text">SecondRight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="429618245040161">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="194768723226925" type="System">
+                                    <param id="0" name="Variable">SecondRight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="275064736541327" type="System">
+                                    <param id="0" name="Variable">MinuteRight</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="597162958782383" type="Function">
+                                    <param id="0" name="Name">&quot;Endgame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="102532143661264" type="Function">
+                                    <param id="0" name="Name">&quot;timeover&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="374252593536404" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="838145452141506" type="System">
+                                    <param id="0" name="Layout">Game2_GameOver</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598983663776558">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="892552024838815" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="385471631437352">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="144900784442096" type="System">
+                                            <param id="0" name="Variable">SecondRight</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="195729612796048" type="SFSecondRight">
+                                            <param id="0" name="Text">&quot;0&quot;&amp;SecondRight</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="855264502909441">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="344181369166271" type="System">
+                                            <param id="0" name="Variable">SecondRight</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="699511839581380" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="457477337681281" type="System">
+                                            <param id="0" name="Variable">MinuteRight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="340881368486157" type="System">
+                                            <param id="0" name="Variable">SecondRight</param>
+                                            <param id="1" name="Value">59</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="396644340242389" type="SFSecondRight">
+                                            <param id="0" name="Text">SecondRight</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="573393985509504" type="SFMinuteRight">
+                                            <param id="0" name="Text">MinuteRight</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="165036012278161" title="GAMEOVER_GAME2">
+            <sub-events>
+                <event-block sid="861115703942477">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="808309387527176" type="Touch">
+                            <param id="0" name="Object">btGameOverHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="138820617606229" type="btGameOverHome">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="0" name="Call function" sid="748876239043948" type="Function">
+                            <param id="0" name="Name">&quot;click&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="297647070781206" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="184895616330290" type="btGameOverHome">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="548184531589288" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
